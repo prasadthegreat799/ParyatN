@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "569501515926",
+    "project_id": "paryatn-97b5f",
+    "storage_bucket": "paryatn-97b5f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:569501515926:android:426a8187b8e15f772fc2b7",
+        "android_client_info": {
+          "package_name": "com.nappdeveloper.paryatn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "569501515926-vh5ca5e59doe2b5qbh0gij7e5j42gus5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxV3UK6HoMuPLUm4qHzFxwJs0oekDci2E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "569501515926-vh5ca5e59doe2b5qbh0gij7e5j42gus5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
