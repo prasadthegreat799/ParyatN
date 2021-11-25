@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/drawable/background_search.xml" value="0.189453125" />
+        <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/drawable/profile_stats_bg.xml" value="0.189453125" />
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/layout/activity_main.xml" value="0.20625" />
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/layout/activity_register_user.xml" value="0.20625" />
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/layout/activity_sign_in.xml" value="0.152" />
@@ -11,6 +13,7 @@
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/layout/fragment_home.xml" value="0.190625" />
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/layout/fragment_profile.xml" value="0.190625" />
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/layout/single_company_layout.xml" value="0.20625" />
+        <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/layout/single_filter_layout.xml" value="0.162890625" />
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/menu/bottom_menu.xml" value="0.117578125" />
         <entry key="..\:/Users/Neela Prasad/AndroidStudioProjects/paryatan/app/src/main/res/drawable/background_search.xml" value="0.19166666666666668" />
         <entry key="..\:/Users/Neela Prasad/AndroidStudioProjects/paryatan/app/src/main/res/layout/activity_main.xml" value="0.17552083333333332" />
@@ -20,11 +23,7 @@
         <entry key="..\:/Users/Neela Prasad/AndroidStudioProjects/paryatan/app/src/main/res/layout/fragment_explore.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Neela Prasad/AndroidStudioProjects/paryatan/app/src/main/res/layout/fragment_home.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Neela Prasad/AndroidStudioProjects/paryatan/app/src/main/res/layout/fragment_profile.xml" value="0.17552083333333332" />
-        <entry key="..\:/Users/Neela Prasad/AndroidStudioProjects/paryatan/app/src/main/res/layout/fragment_tours.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Neela Prasad/AndroidStudioProjects/paryatan/app/src/main/res/layout/single_company_layout.xml" value="0.17552083333333332" />
-        <entry key="..\:/Users/Neela Prasad/AndroidStudioProjects/paryatan/app/src/main/res/layout/single_filter_layout.xml" value="0.17552083333333332" />
-        <entry key="..\:/Users/Neela Prasad/AndroidStudioProjects/paryatan/app/src/main/res/layout/single_tour_layout.xml" value="0.17552083333333332" />
-        <entry key="..\:/Users/Neela Prasad/AndroidStudioProjects/paryatan/app/src/main/res/layout/tourlayout.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Neela Prasad/AndroidStudioProjects/paryatan/app/src/main/res/menu/bottom_menu.xml" value="0.17552083333333332" />
       </map>
     </option>
