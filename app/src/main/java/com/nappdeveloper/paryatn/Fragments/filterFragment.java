@@ -14,17 +14,16 @@ import android.widget.TextView;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.nappdeveloper.paryatn.Adapters.FilterLayoutAdapter;
 import com.nappdeveloper.paryatn.Adapters.PopularCategoriesAdapter;
 import com.nappdeveloper.paryatn.Model.Model;
 import com.nappdeveloper.paryatn.R;
 
 public class filterFragment extends Fragment {
 
-    TextView textView;
-
-    RecyclerView popularCategoriesRecyclerView;
-    PopularCategoriesAdapter popularCategoriesAdapter;
-    DatabaseReference popularCategoriesDatabaseReference;
+    RecyclerView filterLayoutRecyclerView;
+    FilterLayoutAdapter filterLayoutAdapter;
+    DatabaseReference filterLayoutDatabaseReference;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -34,17 +33,17 @@ public class filterFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_filter, container, false);
 
 
-        popularCategoriesDatabaseReference = FirebaseDatabase.getInstance().getReference().child("filterCompanies").child(name);
-        popularCategoriesRecyclerView = (RecyclerView) view.findViewById(R.id.filterLayoutRecyclerView);
-        popularCategoriesRecyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+        filterLayoutDatabaseReference = FirebaseDatabase.getInstance().getReference().child("filterCompanies").child(name);
+        filterLayoutRecyclerView = (RecyclerView) view.findViewById(R.id.filterLayoutRecyclerView);
+        filterLayoutRecyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
 
         FirebaseRecyclerOptions<Model> pcOptions =
                 new FirebaseRecyclerOptions.Builder<Model>()
-                        .setQuery(popularCategoriesDatabaseReference, Model.class)
+                        .setQuery(filterLayoutDatabaseReference, Model.class)
                         .build();
 
-        popularCategoriesAdapter = new PopularCategoriesAdapter(pcOptions);
-        popularCategoriesRecyclerView.setAdapter(popularCategoriesAdapter);
+        filterLayoutAdapter = new FilterLayoutAdapter(pcOptions);
+        filterLayoutRecyclerView.setAdapter(filterLayoutAdapter);
 
         return view;
     }
@@ -53,7 +52,7 @@ public class filterFragment extends Fragment {
     public void onStart() {
         super.onStart();
         //Starts listening for data from firebase when this fragment starts
-        popularCategoriesAdapter.startListening();
+        filterLayoutAdapter.startListening();
 
     }
 
@@ -61,6 +60,6 @@ public class filterFragment extends Fragment {
     public void onStop() {
         super.onStop();
         //Stops listening for data from firebase
-        popularCategoriesAdapter.stopListening();
+        filterLayoutAdapter.stopListening();
     }
 }
