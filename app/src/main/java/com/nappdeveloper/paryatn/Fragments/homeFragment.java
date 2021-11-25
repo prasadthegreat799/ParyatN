@@ -21,8 +21,12 @@ import com.nappdeveloper.paryatn.R;
 public class homeFragment extends Fragment {
 
     RecyclerView filterRecyclerView;
-    FilterAdapter adapter;
-    DatabaseReference databaseReference;
+    FilterAdapter filterAdapter;
+    DatabaseReference filterDatabaseReference;
+
+    RecyclerView filterCompanyRecyclerView;
+    FilterAdapter filterCompanyAdapter;
+    DatabaseReference filterCompanyDatabaseReference;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -30,7 +34,7 @@ public class homeFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
-        databaseReference = FirebaseDatabase.getInstance().getReference().child("filterNamesList");
+        filterDatabaseReference = FirebaseDatabase.getInstance().getReference().child("filterNamesList");
         filterRecyclerView = (RecyclerView) view.findViewById(R.id.filterRecyclerView);
         filterRecyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
 
@@ -38,11 +42,11 @@ public class homeFragment extends Fragment {
         //Firebase Recycler Options to get the data form firebase database using model class and reference
         FirebaseRecyclerOptions<Model> options =
                 new FirebaseRecyclerOptions.Builder<Model>()
-                        .setQuery(databaseReference, Model.class)
+                        .setQuery(filterDatabaseReference, Model.class)
                         .build();
 
-        adapter = new FilterAdapter(options);
-        filterRecyclerView.setAdapter(adapter);
+        filterAdapter = new FilterAdapter(options);
+        filterRecyclerView.setAdapter(filterAdapter);
         return view;
     }
 
@@ -50,13 +54,13 @@ public class homeFragment extends Fragment {
     public void onStart() {
         super.onStart();
         //Starts listening for data from firebase when this fragment starts
-        adapter.startListening();
+        filterAdapter.startListening();
     }
 
     @Override
     public void onStop() {
         super.onStop();
         //Stops listening for data from firebase
-        adapter.stopListening();
+        filterAdapter.stopListening();
     }
 }
