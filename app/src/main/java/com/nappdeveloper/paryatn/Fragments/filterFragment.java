@@ -30,11 +30,11 @@ public class filterFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        String strtext = getArguments().getString("name"); //fetching value by key
+        String name = getArguments().getString("name"); //fetching value by key
         View view = inflater.inflate(R.layout.fragment_filter, container, false);
 
 
-        popularCategoriesDatabaseReference = FirebaseDatabase.getInstance().getReference().child("companyList");
+        popularCategoriesDatabaseReference = FirebaseDatabase.getInstance().getReference().child("filterCompanies").child(name);
         popularCategoriesRecyclerView = (RecyclerView) view.findViewById(R.id.filterLayoutRecyclerView);
         popularCategoriesRecyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
 

@@ -3,6 +3,7 @@ package com.nappdeveloper.paryatn.Adapters;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -45,7 +46,7 @@ public class PopularCategoriesAdapter extends FirebaseRecyclerAdapter<Model, Pop
     //we need view holder to hold each objet form recyclerview and to show it in recyclerview
     class Viewholder extends RecyclerView.ViewHolder {
 
-        CircularImageView companyImage;
+        ImageView companyImage;
         TextView companyName;
 
         public Viewholder(@NonNull View itemView) {
