@@ -50,7 +50,7 @@ public class signInActivity extends AppCompatActivity {
 
         //Initialization
         firebaseAuth = FirebaseAuth.getInstance();
-        signinBtn = findViewById(R.id.signinBtn);
+        signinBtn = findViewById(R.id.signInBtn);
 
 
         progressBar = new ProgressDialog(this);
