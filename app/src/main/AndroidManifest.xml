@@ -8,9 +8,11 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Paryatan">
+        android:theme="@style/Theme.Paryatan"
+        android:usesCleartextTraffic="true">
 
         <activity
             android:name="com.nappdeveloper.paryatn.Activities.splashActivity"
@@ -25,13 +27,14 @@
         <activity
             android:name="com.nappdeveloper.paryatn.Activities.registerUserActivity"
             android:exported="false" />
+
         <activity
             android:name="com.nappdeveloper.paryatn.Activities.signInActivity"
             android:exported="false" />
+
         <activity
             android:name="com.nappdeveloper.paryatn.MainActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true"></activity>
     </application>
 
 </manifest>
