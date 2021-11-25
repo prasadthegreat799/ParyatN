@@ -18,31 +18,46 @@
         android:id="@+id/UserNameTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="User Name" />
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:text="User Name"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/UserBranchTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Branch Here" />
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:text="Branch Here"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/UserMailTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Mail Here" />
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:text="Mail Here"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/UserCollegeTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="User Collage" />
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:text="User Collage"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/UserLocationTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="User Location" />
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:text="User Location"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/SignOutBtn"
@@ -58,8 +73,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="Share App" />
-
-
 
 
 </LinearLayout>

@@ -13,6 +13,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.nappdeveloper.paryatn.Fragments.exploreFragment;
 import com.nappdeveloper.paryatn.Fragments.homeFragment;
 import com.nappdeveloper.paryatn.Fragments.profileFragment;
+import com.nappdeveloper.paryatn.Fragments.toursFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -43,9 +44,11 @@ public class MainActivity extends AppCompatActivity {
                         case R.id.homeMenu:
                             fragment = new homeFragment();
                             break;
-
                         case R.id.exploreMenu:
                             fragment = new exploreFragment();
+                            break;
+                        case R.id.toursMenu:
+                            fragment = new toursFragment();
                             break;
                         case R.id.profileMenu:
                             fragment = new profileFragment();
