@@ -7,72 +7,219 @@
     android:orientation="vertical"
     tools:context=".Fragments.profileFragment">
 
-    <com.mikhaellopez.circularimageview.CircularImageView
-        android:id="@+id/ProfileImg"
-        android:layout_width="90dp"
-        android:layout_height="100dp"
-        android:layout_gravity="center"
-        android:src="@drawable/profile_icon" />
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/UserNameTxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="10dp"
-        android:text="User Name"
-        android:textStyle="bold" />
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/UserBranchTxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="10dp"
-        android:text="Branch Here"
-        android:textStyle="bold" />
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:cardElevation="0dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/UserMailTxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="10dp"
-        android:text="Mail Here"
-        android:textStyle="bold" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:background="@color/browser_actions_bg_grey"
+                    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/UserCollegeTxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="10dp"
-        android:text="User Collage"
-        android:textStyle="bold" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
 
-    <TextView
-        android:id="@+id/UserLocationTxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="10dp"
-        android:text="User Location"
-        android:textStyle="bold" />
+                        <com.mikhaellopez.circularimageview.CircularImageView
+                            android:id="@+id/ProfileImg"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/profile_icon" />
 
-    <Button
-        android:id="@+id/SignOutBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="10dp"
-        android:text="Sign Out" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
 
-    <Button
-        android:id="@+id/ShareBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Share App" />
+                            <TextView
+                                android:id="@+id/UserNameTxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:text="User Name"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"/>
 
+                            <TextView
+                                android:id="@+id/UserBranchTxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Branch Here"
+                                android:textSize="14sp"/>
 
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/UserMailTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Mail Here"
+                    android:gravity="center"
+                    android:textSize="13sp"
+                    android:drawableStart="@drawable/ic_baseline_email_24"
+                    android:drawablePadding="10dp"/>
+
+                <TextView
+                    android:id="@+id/UserCollegeTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="User College"
+                    android:gravity="center"
+                    android:textSize="13sp"
+                    android:drawableStart="@drawable/ic_baseline_account_balance_24"
+                    android:drawablePadding="10dp"/>
+
+                <TextView
+                    android:id="@+id/UserLocationTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="User Location"
+                    android:gravity="center"
+                    android:textSize="13sp"
+                    android:drawableStart="@drawable/ic_baseline_location_on_24"
+                    android:drawablePadding="10dp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/browser_actions_text_color"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <LinearLayout
+                    android:layout_weight="4.99"
+                    android:layout_width="0dp"
+                    android:padding="10dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="26"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Trips"
+                        android:textSize="14sp"
+                        android:layout_gravity="center"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_weight="0.02"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black"/>
+
+                <LinearLayout
+                    android:layout_weight="4.99"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="26"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Total Trips"
+                        android:textSize="14sp"
+                        android:layout_gravity="center"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/browser_actions_text_color"/>
+
+            <Button
+                android:id="@+id/SignOutBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Sign Out" />
+
+            <Button
+                android:id="@+id/ShareBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Share App" />
+
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
