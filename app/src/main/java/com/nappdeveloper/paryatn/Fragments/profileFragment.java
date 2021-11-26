@@ -1,10 +1,12 @@
 package com.nappdeveloper.paryatn.Fragments;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
@@ -12,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.widget.Toolbar;
@@ -34,7 +37,7 @@ import com.nappdeveloper.paryatn.R;
 public class profileFragment extends Fragment {
 
     CircularImageView profileImg;
-    TextView userName, userMail, userCollege, userLocation, userBranch, signOutBtn, shareBtn;
+    TextView userName, userMail, userCollege, userLocation, userBranch, signOutBtn, shareBtn, editBtn;
     Toolbar toolbar;
 
     @Override
@@ -49,11 +52,42 @@ public class profileFragment extends Fragment {
         userBranch = (TextView) view.findViewById(R.id.UserBranchTxt);
         userCollege = (TextView) view.findViewById(R.id.UserCollegeTxt);
         userLocation = (TextView) view.findViewById(R.id.UserLocationTxt);
+        editBtn = (TextView) view.findViewById(R.id.editBtn);
 
         //toolbar = (Toolbar) view.findViewById(R.id.toolbar);
 
         signOutBtn = (TextView) view.findViewById(R.id.SignOutBtn);
         shareBtn = (TextView) view.findViewById(R.id.ShareBtn);
+
+        editBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder alertadd = new AlertDialog.Builder(getActivity(), R.style.MyDialogTheme);
+                LayoutInflater factory = LayoutInflater.from(getActivity());
+                final View view2 = factory.inflate(R.layout.edit_details_popup, null);
+                EditText phoneNumberEditTxt = view2.findViewById(R.id.edit_number);
+                EditText nameEditText = view2.findViewById(R.id.edit_name);
+                alertadd.setView(view2);
+                //Implementing OnClickListener to Open Website
+                alertadd.setPositiveButton("Update", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+
+                alertadd.setNegativeButton("Close", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+
+                final AlertDialog dialog = alertadd.create();
+                dialog.setCancelable(false);
+                dialog.show();
+            }
+        });
 
 
         signOutBtn.setOnClickListener(new View.OnClickListener() {
