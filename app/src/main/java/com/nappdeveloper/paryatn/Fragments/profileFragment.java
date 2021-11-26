@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -13,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+import androidx.appcompat.widget.Toolbar;
 
 import com.bumptech.glide.Glide;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -32,9 +34,8 @@ import com.nappdeveloper.paryatn.R;
 public class profileFragment extends Fragment {
 
     CircularImageView profileImg;
-    TextView userName, userMail, userCollege, userLocation, userBranch;
-    Button signOutBtn, shareBtn;
-
+    TextView userName, userMail, userCollege, userLocation, userBranch, signOutBtn, shareBtn;
+    Toolbar toolbar;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -49,8 +50,10 @@ public class profileFragment extends Fragment {
         userCollege = (TextView) view.findViewById(R.id.UserCollegeTxt);
         userLocation = (TextView) view.findViewById(R.id.UserLocationTxt);
 
-        signOutBtn = (Button) view.findViewById(R.id.SignOutBtn);
-        shareBtn = (Button) view.findViewById(R.id.ShareBtn);
+        //toolbar = (Toolbar) view.findViewById(R.id.toolbar);
+
+        signOutBtn = (TextView) view.findViewById(R.id.SignOutBtn);
+        shareBtn = (TextView) view.findViewById(R.id.ShareBtn);
 
 
         signOutBtn.setOnClickListener(new View.OnClickListener() {
