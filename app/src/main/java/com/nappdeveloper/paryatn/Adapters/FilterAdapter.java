@@ -1,17 +1,24 @@
 package com.nappdeveloper.paryatn.Adapters;
 
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.mikhaellopez.circularimageview.CircularImageView;
+import com.nappdeveloper.paryatn.Fragments.filterFragment;
+import com.nappdeveloper.paryatn.Fragments.homeFragment;
 import com.nappdeveloper.paryatn.Model.Model;
 import com.nappdeveloper.paryatn.R;
 
@@ -27,7 +34,26 @@ public class FilterAdapter extends FirebaseRecyclerAdapter<Model, FilterAdapter.
     @Override
     protected void onBindViewHolder(@NonNull FilterAdapter.Viewholder holder, int position, @NonNull Model model) {
 
-        holder.filterNameTxt.setText(model.getFilterName());
+        String name=model.getFilterName().toString();
+        holder.filterNameTxt.setText(name);
+        holder.filterNameTxt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Fragment fragment = new filterFragment();
+                FragmentManager fragmentManager = ((FragmentActivity) v.getContext()).getSupportFragmentManager(); // this is basically context of the class
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+                Bundle bundle = new Bundle();
+                bundle.putString("name",name); //key and value
+                //set Fragmentclass Arguments
+                fragment.setArguments(bundle);
+                fragmentTransaction.replace(R.id.filterLayout, fragment);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+
+            }
+        });
 
 
     }

@@ -23,28 +23,33 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:layout_marginEnd="5dp"
         android:layout_marginTop="5dp"
-        android:padding="10dp"
+        android:layout_marginEnd="5dp"
         android:background="@drawable/background_search"
         android:drawableRight="@drawable/search_icon"
         android:drawableTint="@color/black"
         android:hint="Search Your Trip"
+        android:padding="10dp"
         android:paddingLeft="10dp"
         android:textSize="16sp" />
 
 
     <LinearLayout
-        android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_margin="10dp"
+        android:orientation="vertical">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/filterRecyclerView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
+            android:layout_height="wrap_content" />
+
+        <FrameLayout
+            android:id="@+id/filterLayout"
+            android:layout_width="match_parent"
+            android:layout_height="300dp" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -52,10 +57,9 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_margin="10dp"/>
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 
@@ -67,15 +71,16 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:text="Popular Categories"
             android:textSize="25dp"
-            android:layout_margin="10dp"
             android:textStyle="bold" />
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/popularCategoriesRecyclerView"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_margin="10dp"/>
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" />
 
     </LinearLayout>
 
