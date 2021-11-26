@@ -13,9 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Paryatan"
         android:usesCleartextTraffic="true">
-
         <activity
-            android:name="com.nappdeveloper.paryatn.Activities.splashActivity"
+            android:name=".Activities.CompanyDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.splashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,18 +25,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
-            android:name="com.nappdeveloper.paryatn.Activities.registerUserActivity"
+            android:name=".Activities.registerUserActivity"
             android:exported="false" />
-
         <activity
-            android:name="com.nappdeveloper.paryatn.Activities.signInActivity"
+            android:name=".Activities.signInActivity"
             android:exported="false" />
-
         <activity
-            android:name="com.nappdeveloper.paryatn.MainActivity"
-            android:exported="true"></activity>
+            android:name=".MainActivity"
+            android:exported="true" />
     </application>
 
 </manifest>

@@ -1,5 +1,6 @@
 package com.nappdeveloper.paryatn.Adapters;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,7 @@ import com.bumptech.glide.Glide;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.mikhaellopez.circularimageview.CircularImageView;
+import com.nappdeveloper.paryatn.Activities.CompanyDetailsActivity;
 import com.nappdeveloper.paryatn.Model.Model;
 import com.nappdeveloper.paryatn.R;
 
@@ -30,6 +32,14 @@ public class FilterLayoutAdapter extends FirebaseRecyclerAdapter<Model, FilterLa
 
         Glide.with(holder.companyImage.getContext()).load(model.getCompanyLogo()).into(holder.companyImage);
         holder.companyName.setText(model.getCompanyName());
+
+        holder.companyImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(v.getContext(), CompanyDetailsActivity.class);
+                v.getContext().startActivity(intent);
+            }
+        });
 
     }
 

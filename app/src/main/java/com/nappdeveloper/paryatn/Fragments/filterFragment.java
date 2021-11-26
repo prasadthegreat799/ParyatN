@@ -60,6 +60,6 @@ public class filterFragment extends Fragment {
     public void onStop() {
         super.onStop();
         //Stops listening for data from firebase
-        filterLayoutAdapter.stopListening();
+       // filterLayoutAdapter.stopListening();
     }
 }

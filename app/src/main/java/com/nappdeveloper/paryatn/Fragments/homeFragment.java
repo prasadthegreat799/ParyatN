@@ -3,6 +3,9 @@ package com.nappdeveloper.paryatn.Fragments;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -29,6 +32,7 @@ public class homeFragment extends Fragment {
     DatabaseReference popularCategoriesDatabaseReference;
 
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -44,6 +48,17 @@ public class homeFragment extends Fragment {
         popularCategoriesDatabaseReference = FirebaseDatabase.getInstance().getReference().child("companyList");
         popularCategoriesRecyclerView = (RecyclerView) view.findViewById(R.id.popularCategoriesRecyclerView);
         popularCategoriesRecyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+
+
+        Fragment fragment = new filterFragment();
+        FragmentManager fragmentManager = ((FragmentActivity) view.getContext()).getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        Bundle bundle = new Bundle();
+        bundle.putString("name","All");
+        fragment.setArguments(bundle);
+        fragmentTransaction.replace(R.id.filterLayout, fragment);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
 
 
         //Firebase Recycler Options to get the data form firebase database using model class and reference
