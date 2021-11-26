@@ -28,6 +28,10 @@
         <item name="android:textColor">#fff</item>
     </style>
 
+    <style name="BottomNavigation.ActiveItemTextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textStyle">bold</item>
+    </style>
+
 <!--    <style name="Theme.Main" parent="Theme.MaterialComponents.DayNight.NoActionBar">-->
 <!--        &lt;!&ndash; Primary brand color. &ndash;&gt;-->
 <!--        <item name="colorPrimary">@color/purple_500</item>-->

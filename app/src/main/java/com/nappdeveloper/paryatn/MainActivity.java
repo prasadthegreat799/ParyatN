@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -18,11 +19,17 @@ import com.nappdeveloper.paryatn.Fragments.toursFragment;
 public class MainActivity extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
+    View v1, v2, v3, v4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        v1 = findViewById(R.id.view1);
+        v2 = findViewById(R.id.view2);
+        v3 = findViewById(R.id.view3);
+        v4 = findViewById(R.id.view4);
 
         bottomNavigationView = (BottomNavigationView) findViewById(R.id.BottomNavigationView);
         bottomNavigationView.setBackground(null);
@@ -43,15 +50,31 @@ public class MainActivity extends AppCompatActivity {
 
                         case R.id.homeMenu:
                             fragment = new homeFragment();
+                            v1.setBackgroundColor(getResources().getColor(R.color.purple_500));
+                            v2.setBackgroundColor(getResources().getColor(R.color.white));
+                            v3.setBackgroundColor(getResources().getColor(R.color.white));
+                            v4.setBackgroundColor(getResources().getColor(R.color.white));
                             break;
                         case R.id.exploreMenu:
                             fragment = new exploreFragment();
+                            v2.setBackgroundColor(getResources().getColor(R.color.purple_500));
+                            v1.setBackgroundColor(getResources().getColor(R.color.white));
+                            v3.setBackgroundColor(getResources().getColor(R.color.white));
+                            v4.setBackgroundColor(getResources().getColor(R.color.white));
                             break;
                         case R.id.toursMenu:
                             fragment = new toursFragment();
+                            v3.setBackgroundColor(getResources().getColor(R.color.purple_500));
+                            v1.setBackgroundColor(getResources().getColor(R.color.white));
+                            v2.setBackgroundColor(getResources().getColor(R.color.white));
+                            v4.setBackgroundColor(getResources().getColor(R.color.white));
                             break;
                         case R.id.profileMenu:
                             fragment = new profileFragment();
+                            v4.setBackgroundColor(getResources().getColor(R.color.purple_500));
+                            v1.setBackgroundColor(getResources().getColor(R.color.white));
+                            v2.setBackgroundColor(getResources().getColor(R.color.white));
+                            v3.setBackgroundColor(getResources().getColor(R.color.white));
                             break;
 
                         default:
