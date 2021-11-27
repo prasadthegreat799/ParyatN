@@ -35,7 +35,6 @@ public class FilterLayoutAdapter extends FirebaseRecyclerAdapter<Model, FilterLa
             String imageId=model.getImageId().toString();
             Glide.with(holder.companyImage.getContext()).load(model.getCompanyLogo()).into(holder.companyImage);
             holder.companyName.setText(model.getCompanyName());
-            System.out.println("Image:"+imageCategory);
 
             holder.companyImage.setOnClickListener(new View.OnClickListener() {
                 @Override
