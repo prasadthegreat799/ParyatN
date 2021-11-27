@@ -32,6 +32,11 @@ public class PopularCategoriesAdapter extends FirebaseRecyclerAdapter<Model, Pop
         holder.companyName.setText(model.getCompanyName());
     }
 
+    @Override
+    public void onDataChanged() {
+        notifyDataSetChanged();
+        super.onDataChanged();
+    }
 
     @NonNull
     @Override

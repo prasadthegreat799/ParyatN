@@ -36,6 +36,7 @@ public class filterFragment extends Fragment {
         filterLayoutDatabaseReference = FirebaseDatabase.getInstance().getReference().child("filterCompanies").child(name);
         filterLayoutRecyclerView = (RecyclerView) view.findViewById(R.id.filterLayoutRecyclerView);
         filterLayoutRecyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+        filterLayoutRecyclerView.getRecycledViewPool().clear();
 
         FirebaseRecyclerOptions<Model> pcOptions =
                 new FirebaseRecyclerOptions.Builder<Model>()

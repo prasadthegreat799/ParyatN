@@ -36,6 +36,11 @@ public class ToursAdapter extends FirebaseRecyclerAdapter<Model, ToursAdapter.Vi
 
     }
 
+    @Override
+    public void onDataChanged() {
+        notifyDataSetChanged();
+        super.onDataChanged();
+    }
 
     @NonNull
     @Override

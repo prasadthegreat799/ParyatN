@@ -37,6 +37,11 @@ public class ExploreAdapter extends FirebaseRecyclerAdapter<Model, ExploreAdapte
 
     }
 
+    @Override
+    public void onDataChanged() {
+        notifyDataSetChanged();
+        super.onDataChanged();
+    }
 
     @NonNull
     @Override

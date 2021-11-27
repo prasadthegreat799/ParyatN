@@ -43,11 +43,15 @@ public class homeFragment extends Fragment {
         filterDatabaseReference = FirebaseDatabase.getInstance().getReference().child("filterNamesList");
         filterRecyclerView = (RecyclerView) view.findViewById(R.id.filterRecyclerView);
         filterRecyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+        filterRecyclerView.getRecycledViewPool().clear();
+
 
 
         popularCategoriesDatabaseReference = FirebaseDatabase.getInstance().getReference().child("companyList");
         popularCategoriesRecyclerView = (RecyclerView) view.findViewById(R.id.popularCategoriesRecyclerView);
         popularCategoriesRecyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+        popularCategoriesRecyclerView.getRecycledViewPool().clear();
+
 
 
         Fragment fragment = new filterFragment();
@@ -77,6 +81,7 @@ public class homeFragment extends Fragment {
 
         popularCategoriesAdapter= new PopularCategoriesAdapter(pcOptions);
         popularCategoriesRecyclerView.setAdapter(popularCategoriesAdapter);
+
         return view;
 
     }

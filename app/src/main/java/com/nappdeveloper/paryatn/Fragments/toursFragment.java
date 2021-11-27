@@ -35,6 +35,7 @@ public class toursFragment extends Fragment {
         databaseReference = FirebaseDatabase.getInstance().getReference().child("companyList");
         recyclerView = (RecyclerView) view.findViewById(R.id.ToursRecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        recyclerView.getRecycledViewPool().clear();
 
         //Firebase Recycler Options to get the data form firebase database using model class and reference
         FirebaseRecyclerOptions<Model> options =

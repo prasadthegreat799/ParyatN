@@ -48,6 +48,11 @@ public class FilterLayoutAdapter extends FirebaseRecyclerAdapter<Model, FilterLa
 
     }
 
+    @Override
+    public void onDataChanged() {
+        notifyDataSetChanged();
+        super.onDataChanged();
+    }
 
     @NonNull
     @Override

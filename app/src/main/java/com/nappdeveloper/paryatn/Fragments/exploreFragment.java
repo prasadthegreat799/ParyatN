@@ -33,6 +33,8 @@ public class exploreFragment extends Fragment {
         databaseReference = FirebaseDatabase.getInstance().getReference().child("companyList");
         recyclerView = (RecyclerView) view.findViewById(R.id.CompaniesRecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        recyclerView.getRecycledViewPool().clear();
+
 
 
 
@@ -47,6 +49,7 @@ public class exploreFragment extends Fragment {
         return view;
     }
 
+
     @Override
     public void onStart() {
         super.onStart();
@@ -60,4 +63,5 @@ public class exploreFragment extends Fragment {
         //Stops listening for data from firebase
         adapter.stopListening();
     }
+
 }
