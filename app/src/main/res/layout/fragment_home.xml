@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".Fragments.homeFragment">
 
@@ -12,11 +13,14 @@
         android:layout_height="wrap_content"
         android:text="Discover"
         android:textSize="26dp"
+        android:layout_margin="10dp"
         android:textStyle="bold" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
         android:text="Explore the best places in the world" />
 
     <EditText
