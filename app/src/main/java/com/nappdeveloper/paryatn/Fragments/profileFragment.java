@@ -123,7 +123,14 @@ public class profileFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                Toast.makeText(view.getContext(), "Share Btn", Toast.LENGTH_SHORT).show();
+                Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+                sharingIntent.setType("text/plain");
+                String shareBody ="Hey Hi," +
+                        "Let Me Introduce you to this app called ParyatN.\n" +
+                        "        This is an amazing app that teaches you practical knowledge through tours of industries.";
+                sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "ParyatN");
+                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
+                startActivity(Intent.createChooser(sharingIntent, "Share via"));
             }
         });
 
