@@ -47,8 +47,6 @@ public class FilterLayoutAdapter extends FirebaseRecyclerAdapter<Model, FilterLa
                 }
             });
 
-
-
     }
 
 
