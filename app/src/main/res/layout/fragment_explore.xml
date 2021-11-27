@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/purple_200"
     android:orientation="vertical"
     tools:context=".Fragments.exploreFragment">
 
@@ -10,8 +11,15 @@
         android:id="@+id/SearchCompaniesEdit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:hint="Search Tour Here..." />
+        android:layout_margin="30dp"
+        android:background="@drawable/background_search"
+        android:drawableRight="@drawable/search_icon"
+        android:drawableTint="@color/black"
+        android:hint="Search Tour..."
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:paddingLeft="10dp"
+        android:textSize="15sp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/CompaniesRecyclerView"
