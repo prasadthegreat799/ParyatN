@@ -30,6 +30,8 @@ public class FilterLayoutAdapter extends FirebaseRecyclerAdapter<Model, FilterLa
     @Override
     protected void onBindViewHolder(@NonNull FilterLayoutAdapter.Viewholder holder, int position, @NonNull Model model) {
 
+        String imageCategory=model.getImageCategory().toString();
+        String imageId=model.getImageId().toString();
         Glide.with(holder.companyImage.getContext()).load(model.getCompanyLogo()).into(holder.companyImage);
         holder.companyName.setText(model.getCompanyName());
 
@@ -37,6 +39,8 @@ public class FilterLayoutAdapter extends FirebaseRecyclerAdapter<Model, FilterLa
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(v.getContext(), CompanyDetailsActivity.class);
+                intent.putExtra("imageCategory",imageCategory);
+                intent.putExtra("imageId",imageId);
                 v.getContext().startActivity(intent);
             }
         });

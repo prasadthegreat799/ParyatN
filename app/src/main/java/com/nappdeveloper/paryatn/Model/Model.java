@@ -4,16 +4,19 @@ public class Model {
 
     String companyLogo, companyName, companyLocation, companyType, companyRating;
     String filterName;
+    String imageId,imageCategory;
 
     public Model() {}
 
-    public Model(String companyLogo, String companyName, String companyLocation, String companyType, String companyRating, String filterName) {
+    public Model(String companyLogo, String companyName, String companyLocation, String companyType, String companyRating, String filterName, String imageId, String imageCategory) {
         this.companyLogo = companyLogo;
         this.companyName = companyName;
         this.companyLocation = companyLocation;
         this.companyType = companyType;
         this.companyRating = companyRating;
         this.filterName = filterName;
+        this.imageId = imageId;
+        this.imageCategory = imageCategory;
     }
 
     public String getCompanyLogo() {
@@ -62,5 +65,21 @@ public class Model {
 
     public void setFilterName(String filterName) {
         this.filterName = filterName;
+    }
+
+    public String getImageId() {
+        return imageId;
+    }
+
+    public void setImageId(String imageId) {
+        this.imageId = imageId;
+    }
+
+    public String getImageCategory() {
+        return imageCategory;
+    }
+
+    public void setImageCategory(String imageCategory) {
+        this.imageCategory = imageCategory;
     }
 }
