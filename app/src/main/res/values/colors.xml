@@ -11,4 +11,6 @@
     <color name="pale_red">#EC3030</color>
     <color name="rating_yellow">#F8B42D</color>
     <color name="green">#4DDA01</color>
+
+    <color name="pale_black">#434343</color>
 </resources>
