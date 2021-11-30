@@ -34,7 +34,6 @@ public class ExploreAdapter extends FirebaseRecyclerAdapter<Model, ExploreAdapte
         holder.companyRating.setText(model.getCompanyRating());
         holder.companyLocation.setText(model.getCompanyLocation());
 
-
     }
 
     @Override

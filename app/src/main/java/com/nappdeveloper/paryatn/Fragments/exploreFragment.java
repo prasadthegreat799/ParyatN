@@ -36,8 +36,6 @@ public class exploreFragment extends Fragment {
         recyclerView.getRecycledViewPool().clear();
 
 
-
-
         //Firebase Recycler Options to get the data form firebase database using model class and reference
         FirebaseRecyclerOptions<Model> options =
                 new FirebaseRecyclerOptions.Builder<Model>()
