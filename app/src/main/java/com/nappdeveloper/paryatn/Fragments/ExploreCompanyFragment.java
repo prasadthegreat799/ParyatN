@@ -21,33 +21,23 @@ import com.nappdeveloper.paryatn.Adapters.FilterAdapter;
 import com.nappdeveloper.paryatn.Model.Model;
 import com.nappdeveloper.paryatn.R;
 
-public class exploreFragment extends Fragment {
+public class ExploreCompanyFragment extends Fragment {
+
 
     RecyclerView recyclerView;
-    FilterAdapter adapter;
+    ExploreAdapter adapter;
     DatabaseReference databaseReference;
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view=inflater.inflate(R.layout.fragment_explore, container, false);
+        View view=inflater.inflate(R.layout.fragment_explore_company, container, false);
 
-        databaseReference =FirebaseDatabase.getInstance().getReference().child("filterNamesList");
+        databaseReference = FirebaseDatabase.getInstance().getReference().child("filterCompanies");
         recyclerView = (RecyclerView) view.findViewById(R.id.exploreFilterRecyclerView);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.getRecycledViewPool().clear();
-
-        Fragment fragment = new filterFragment();
-        FragmentManager fragmentManager = ((FragmentActivity) view.getContext()).getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        Bundle bundle = new Bundle();
-        bundle.putString("name","All");
-        fragment.setArguments(bundle);
-        fragmentTransaction.replace(R.id.exploreFilterLayout, fragment);
-        fragmentTransaction.addToBackStack(null);
-        fragmentTransaction.commit();
 
 
         //Firebase Recycler Options to get the data form firebase database using model class and reference
@@ -56,7 +46,7 @@ public class exploreFragment extends Fragment {
                         .setQuery(databaseReference, Model.class)
                         .build();
 
-        adapter = new FilterAdapter(options);
+        adapter = new ExploreAdapter(options);
         recyclerView.setAdapter(adapter);
         return view;
     }

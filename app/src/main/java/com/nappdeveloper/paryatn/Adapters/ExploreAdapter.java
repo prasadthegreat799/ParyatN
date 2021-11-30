@@ -69,7 +69,5 @@ public class ExploreAdapter extends FirebaseRecyclerAdapter<Model, ExploreAdapte
 
         }
     }
-
-
 }
 

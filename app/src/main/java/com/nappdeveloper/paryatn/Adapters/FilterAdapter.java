@@ -48,7 +48,7 @@ public class FilterAdapter extends FirebaseRecyclerAdapter<Model, FilterAdapter.
                 bundle.putString("name",name); //key and value
                 //set Fragmentclass Arguments
                 fragment.setArguments(bundle);
-                fragmentTransaction.replace(R.id.filterLayout, fragment);
+                fragmentTransaction.replace(R.id.exploreFilterLayout, fragment);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
 
