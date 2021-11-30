@@ -7,20 +7,18 @@
     tools:context=".Activities.CompanyDetailsActivity">
 
     <RelativeLayout
+        android:translationZ="1dp"
         android:id="@+id/title_layout"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp">
 
-        <TextView
-            android:id="@+id/company_page_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:text="Company Details"
-            android:textColor="@color/purple_700"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            app:tint="@color/white"/>
 
     </RelativeLayout>
 
@@ -32,8 +30,7 @@
         android:background="@color/purple_700"/>
 
     <ScrollView
-        android:layout_below="@id/view_line"
-        android:layout_above="@id/trip_details_layout"
+        android:layout_above="@id/button_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -49,242 +46,352 @@
                 <ImageView
                     android:id="@+id/CompanyLogoImg"
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:layout_margin="5dp"
-                    android:padding="10dp"
-                    android:src="@drawable/profile_icon" />
+                    android:layout_height="400dp"
+                    android:scaleType="centerCrop"
+                    android:adjustViewBounds="true"
+                    android:background="@color/teal_700"
+                    android:src="@drawable/microsoft" />
 
             </LinearLayout>
 
-
             <LinearLayout
-                android:id="@+id/details_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="-40dp"
                 android:layout_below="@id/CompanyLogo_Layout"
-                android:background="@color/pale_black"
-                android:orientation="vertical"
-                android:padding="10dp">
-
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingStart="10dp"
-                    android:paddingEnd="10dp">
-
-                    <TextView
-                        android:id="@+id/companyNameTxt"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentStart="true"
-                        android:layout_centerVertical="true"
-                        android:text="Company Name"
-                        android:textColor="@color/white"
-                        android:textSize="18dp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:layout_centerVertical="true"
-                        android:text="$1200"
-                        android:textColor="@color/white"
-                        android:textSize="16dp"
-                        android:textStyle="bold" />
-
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:id="@+id/details_layout2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingStart="10dp"
-                    android:paddingEnd="10dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentStart="true"
-                        android:layout_centerVertical="true"
-                        android:text="Type"
-                        android:textColor="@color/white"
-                        android:textSize="14dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:layout_centerVertical="true"
-                        android:text="Estimated Cost"
-                        android:textColor="@color/white"
-                        android:textSize="14dp" />
-
-                </RelativeLayout>
-
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:id="@+id/details_menu_layout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/details_layout"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="10dp"
-                android:orientation="vertical"
-                android:padding="5dp">
+                android:background="@drawable/background_curved">
 
                 <LinearLayout
+                    android:id="@+id/details_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:orientation="horizontal">
+                    android:orientation="vertical"
+                    android:layout_marginTop="20dp"
+                    android:padding="10dp">
 
-                    <TextView
-                        android:id="@+id/companyOverviewTxt"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:background="@color/purple_500"
-                        android:gravity="center"
-                        android:padding="5dp"
-                        android:text="Overview"
-                        android:textColor="@color/white"
-                        android:textSize="16dp"
-                        android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/companyDetailsTxt"
-                        android:layout_width="wrap_content"
+                    <RelativeLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:background="@color/browser_actions_bg_grey"
-                        android:gravity="center"
-                        android:padding="5dp"
-                        android:text="Details"
-                        android:textColor="@color/black"
-                        android:textSize="16dp" />
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp">
 
-                    <TextView
-                        android:id="@+id/companyReviewTxt"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:background="@color/browser_actions_bg_grey"
-                        android:gravity="center"
-                        android:padding="5dp"
-                        android:text="Reviews"
-                        android:textColor="@color/black"
-                        android:textSize="16dp" />
+                        <TextView
+                            android:id="@+id/companyNameTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:text="Company Name"
+                            android:textColor="@color/black"
+                            android:textSize="23dp"
+                            android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/companyTripCostTxt"
-                        android:layout_width="wrap_content"
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:text="$1200"
+                            android:textColor="@color/purple_500"
+                            android:textSize="25dp"
+                            android:textStyle="bold" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/details_layout2"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:background="@color/browser_actions_bg_grey"
-                        android:gravity="center"
-                        android:padding="5dp"
-                        android:text="Costs"
-                        android:textColor="@color/black"
-                        android:textSize="16dp" />
+                        android:layout_marginTop="2dp"
+                        android:orientation="horizontal"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:text="Software Company"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:text="* Estimated Cost"
+                            android:textSize="14dp" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/rating_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4.7"
+                            android:drawableStart="@drawable/ic_baseline_star_half_18"
+                            android:drawableTint="@color/rating_yellow"
+                            android:drawablePadding="2dp"
+                            android:textSize="14dp"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="  (2.7K)"
+                            android:textSize="14dp"
+                            android:layout_gravity="center_vertical"/>
+
+                    </LinearLayout>
+
 
                 </LinearLayout>
 
 
-                <TextView
-                    android:id="@+id/companyDataTxt"
+                <LinearLayout
+                    android:id="@+id/details_menu_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:lineHeight="22dp"
-                    android:padding="10dp"
-                    android:text="Some Random Data About Comapany and it's Details Some Random Data About Comapany and it's Details"
-                    android:textSize="14dp" />
+                    android:layout_below="@id/details_layout"
+                    android:orientation="vertical">
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="5dp"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/companyOverviewTxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="Overview"
+                                android:textColor="@color/purple_500"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+                            <View
+                                android:id="@+id/ul1"
+                                android:layout_width="30dp"
+                                android:layout_height="5dp"
+                                android:requiresFadingEdge="horizontal"
+                                android:background="@drawable/background_bookbtn"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:padding="5dp"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/companyDetailsTxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="Details"
+                                android:textStyle="bold"
+                                android:textSize="15dp" />
+
+                            <View
+                                android:id="@+id/ul2"
+                                android:layout_width="30dp"
+                                android:layout_height="5dp"
+                                android:requiresFadingEdge="horizontal"
+                                android:visibility="gone"
+                                android:background="@drawable/background_bookbtn"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:padding="5dp"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/companyReviewTxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="Reviews"
+                                android:textStyle="bold"
+                                android:textSize="15dp" />
+
+                            <View
+                                android:id="@+id/ul3"
+                                android:layout_width="30dp"
+                                android:layout_height="5dp"
+                                android:requiresFadingEdge="horizontal"
+
+                                android:visibility="gone"
+                                android:background="@drawable/background_bookbtn"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:padding="5dp"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/companyTripCostTxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="Costs"
+                                android:textStyle="bold"
+                                android:textSize="15dp" />
+
+                            <View
+                                android:id="@+id/ul4"
+                                android:layout_width="30dp"
+                                android:layout_height="5dp"
+                                android:requiresFadingEdge="horizontal"
+                                android:visibility="gone"
+                                android:background="@drawable/background_bookbtn"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/companyDataTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:lineHeight="22dp"
+                        android:padding="10dp"
+                        android:text="Some Random Data About Comapany and it's Details Some Random Data About Comapany and it's Details"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/trip_details_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/button_layout"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@color/browser_actions_bg_grey"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp">
+
+                        <TextView
+                            android:id="@+id/companyTripDurationTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:drawableStart="@drawable/ic_baseline_access_time_filled_24"
+                            android:drawablePadding="2dp"
+                            android:drawableTint="#0082AA"
+                            android:text="5 Days"
+                            android:textColor="@color/black"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/companyTripDistanceTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:drawableStart="@drawable/ic_baseline_location_on_18"
+                            android:drawablePadding="2dp"
+                            android:drawableTint="@color/purple_500"
+                            android:text="150km"
+                            android:textColor="@color/black"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="20dp"
+                            android:text="Duration"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:text="Distance"
+                            android:textSize="14dp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
 
             </LinearLayout>
 
         </RelativeLayout>
 
     </ScrollView>
-
-    <LinearLayout
-        android:id="@+id/trip_details_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/button_layout"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:background="@color/browser_actions_bg_grey"
-        android:orientation="vertical"
-        android:padding="10dp">
-
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingStart="10dp"
-            android:paddingEnd="10dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:text="Duration"
-                android:textSize="14dp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:text="Distance"
-                android:textSize="14dp"
-                android:textStyle="bold" />
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingStart="10dp"
-            android:paddingEnd="10dp">
-
-            <TextView
-                android:id="@+id/companyTripDurationTxt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:text="5 Days"
-                android:textColor="@color/black"
-                android:textSize="16dp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/companyTripDistanceTxt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:text="150km"
-                android:textColor="@color/black"
-                android:textSize="16dp"
-                android:textStyle="bold" />
-
-        </RelativeLayout>
-
-
-    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/button_layout"
@@ -299,23 +406,24 @@
 
         <Button
             android:layout_width="0dp"
-            android:layout_height="60dp"
+            android:layout_height="50dp"
             android:layout_weight="0.3"
             android:layout_gravity="center"
-            android:drawableLeft="@drawable/ic_baseline_star_half_24"
-            android:drawableTint="@color/rating_yellow"
-            android:text="4.5"
+            android:text="$1200"
             android:textStyle="bold"
             android:textSize="18sp"
-            android:textColor="@color/white"/>
+            android:background="@drawable/background_btn"
+            android:textColor="@color/purple_500"/>
 
         <Button
             android:layout_width="0dp"
-            android:layout_height="60dp"
+            android:layout_height="50dp"
             android:layout_marginStart="10dp"
             android:layout_gravity="center"
             android:layout_weight="0.7"
-            android:text="Book Now" />
+            android:background="@drawable/background_bookbtn"
+            android:text="Book Now"
+            android:textColor="@color/white"/>
 
     </LinearLayout>
 

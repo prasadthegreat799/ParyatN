@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -31,6 +32,8 @@ public class CompanyDetailsActivity extends AppCompatActivity {
     TextView companyOverviewTxt, companyDetailsTxt, companyReviewsTxt, companyTripCostTxt, companyTripDurationTxt, companyTripDistanceTxt;
     TextView companyDataTxt;
 
+    View v1, v2, v3, v4;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +43,11 @@ public class CompanyDetailsActivity extends AppCompatActivity {
         String imageId = getIntent().getStringExtra("imageId");
         String imageCategory = getIntent().getStringExtra("imageCategory");
         databaseReference = FirebaseDatabase.getInstance().getReference().child("filterCompanies").child(imageCategory).child(imageId);
+
+        v1 = (View) findViewById(R.id.ul1);
+        v2 = (View) findViewById(R.id.ul2);
+        v3 = (View) findViewById(R.id.ul3);
+        v4 = (View) findViewById(R.id.ul4);
 
         companyImage = (ImageView) findViewById(R.id.CompanyLogoImg);
         companyNameTxt = (TextView) findViewById(R.id.companyNameTxt);
@@ -56,6 +64,16 @@ public class CompanyDetailsActivity extends AppCompatActivity {
         companyOverviewTxt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                v1.setVisibility(View.VISIBLE);
+                v2.setVisibility(View.GONE);
+                v3.setVisibility(View.GONE);
+                v4.setVisibility(View.GONE);
+
+                companyOverviewTxt.setTextColor(getResources().getColor(R.color.purple_500));
+                companyDetailsTxt.setTextColor(Color.parseColor("#808080"));
+                companyReviewsTxt.setTextColor(Color.parseColor("#808080"));
+                companyTripCostTxt.setTextColor(Color.parseColor("#808080"));
+
                 databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -83,6 +101,16 @@ public class CompanyDetailsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                v2.setVisibility(View.VISIBLE);
+                v1.setVisibility(View.GONE);
+                v3.setVisibility(View.GONE);
+                v4.setVisibility(View.GONE);
+
+                companyDetailsTxt.setTextColor(getResources().getColor(R.color.purple_500));
+                companyOverviewTxt.setTextColor(Color.parseColor("#808080"));
+                companyReviewsTxt.setTextColor(Color.parseColor("#808080"));
+                companyTripCostTxt.setTextColor(Color.parseColor("#808080"));
+
                 databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -109,6 +137,16 @@ public class CompanyDetailsActivity extends AppCompatActivity {
         companyReviewsTxt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                v3.setVisibility(View.VISIBLE);
+                v1.setVisibility(View.GONE);
+                v2.setVisibility(View.GONE);
+                v4.setVisibility(View.GONE);
+
+                companyReviewsTxt.setTextColor(getResources().getColor(R.color.purple_500));
+                companyOverviewTxt.setTextColor(Color.parseColor("#808080"));
+                companyDetailsTxt.setTextColor(Color.parseColor("#808080"));
+                companyTripCostTxt.setTextColor(Color.parseColor("#808080"));
                 databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -135,6 +173,15 @@ public class CompanyDetailsActivity extends AppCompatActivity {
         companyTripCostTxt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                v4.setVisibility(View.VISIBLE);
+                v1.setVisibility(View.GONE);
+                v2.setVisibility(View.GONE);
+                v3.setVisibility(View.GONE);
+
+                companyTripCostTxt.setTextColor(getResources().getColor(R.color.purple_500));
+                companyOverviewTxt.setTextColor(Color.parseColor("#808080"));
+                companyDetailsTxt.setTextColor(Color.parseColor("#808080"));
+                companyReviewsTxt.setTextColor(Color.parseColor("#808080"));
                 databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
