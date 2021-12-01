@@ -13,26 +13,24 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
-import com.mikhaellopez.circularimageview.CircularImageView;
+import com.nappdeveloper.paryatn.Fragments.ExploreCompanyFragment;
 import com.nappdeveloper.paryatn.Fragments.filterFragment;
-import com.nappdeveloper.paryatn.Fragments.homeFragment;
 import com.nappdeveloper.paryatn.Model.Model;
 import com.nappdeveloper.paryatn.R;
 
-public class FilterAdapter extends FirebaseRecyclerAdapter<Model, FilterAdapter.Viewholder> {
+public class ExploreFilterAdapter extends FirebaseRecyclerAdapter<Model, ExploreFilterAdapter.Viewholder> {
 
 
-    public FilterAdapter(@NonNull FirebaseRecyclerOptions<Model> options) {
+    public ExploreFilterAdapter(@NonNull FirebaseRecyclerOptions<Model> options) {
 
         super(options);
 
     }
 
     @Override
-    protected void onBindViewHolder(@NonNull FilterAdapter.Viewholder holder, int position, @NonNull Model model) {
+    protected void onBindViewHolder(@NonNull ExploreFilterAdapter.Viewholder holder, int position, @NonNull Model model) {
 
         String name=model.getFilterName().toString();
         holder.filterNameTxt.setText(name);
@@ -40,7 +38,7 @@ public class FilterAdapter extends FirebaseRecyclerAdapter<Model, FilterAdapter.
             @Override
             public void onClick(View v) {
 
-                Fragment fragment = new filterFragment();
+                Fragment fragment = new ExploreCompanyFragment();
                 FragmentManager fragmentManager = ((FragmentActivity) v.getContext()).getSupportFragmentManager(); // this is basically context of the class
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
@@ -48,7 +46,7 @@ public class FilterAdapter extends FirebaseRecyclerAdapter<Model, FilterAdapter.
                 bundle.putString("name",name); //key and value
                 //set Fragmentclass Arguments
                 fragment.setArguments(bundle);
-                fragmentTransaction.replace(R.id.filterLayout, fragment);
+                fragmentTransaction.replace(R.id.exploreFilterLayout, fragment);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
 
@@ -64,11 +62,11 @@ public class FilterAdapter extends FirebaseRecyclerAdapter<Model, FilterAdapter.
 
     @NonNull
     @Override
-    public FilterAdapter.Viewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ExploreFilterAdapter.Viewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         //the data objects are inflated into the xml file single_data_item
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.single_filter_layout, parent, false);
-        return new FilterAdapter.Viewholder(view);
+        return new ExploreFilterAdapter.Viewholder(view);
 
     }
 

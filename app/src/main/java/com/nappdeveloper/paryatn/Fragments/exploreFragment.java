@@ -17,6 +17,7 @@ import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.nappdeveloper.paryatn.Adapters.ExploreAdapter;
+import com.nappdeveloper.paryatn.Adapters.ExploreFilterAdapter;
 import com.nappdeveloper.paryatn.Adapters.FilterAdapter;
 import com.nappdeveloper.paryatn.Model.Model;
 import com.nappdeveloper.paryatn.R;
@@ -24,7 +25,7 @@ import com.nappdeveloper.paryatn.R;
 public class exploreFragment extends Fragment {
 
     RecyclerView recyclerView;
-    FilterAdapter adapter;
+    ExploreFilterAdapter adapter;
     DatabaseReference databaseReference;
 
 
@@ -39,7 +40,7 @@ public class exploreFragment extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         recyclerView.getRecycledViewPool().clear();
 
-        Fragment fragment = new filterFragment();
+        Fragment fragment = new ExploreCompanyFragment();
         FragmentManager fragmentManager = ((FragmentActivity) view.getContext()).getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         Bundle bundle = new Bundle();
@@ -56,7 +57,7 @@ public class exploreFragment extends Fragment {
                         .setQuery(databaseReference, Model.class)
                         .build();
 
-        adapter = new FilterAdapter(options);
+        adapter = new ExploreFilterAdapter(options);
         recyclerView.setAdapter(adapter);
         return view;
     }

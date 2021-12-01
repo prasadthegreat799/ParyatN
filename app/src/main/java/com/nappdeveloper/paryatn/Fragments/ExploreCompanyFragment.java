@@ -32,10 +32,11 @@ public class ExploreCompanyFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view=inflater.inflate(R.layout.fragment_explore_company, container, false);
 
-        databaseReference = FirebaseDatabase.getInstance().getReference().child("filterCompanies");
-        recyclerView = (RecyclerView) view.findViewById(R.id.exploreFilterRecyclerView);
+        View view=inflater.inflate(R.layout.fragment_explore_company, container, false);
+        String name = getArguments().getString("name"); //fetching value by key
+        databaseReference = FirebaseDatabase.getInstance().getReference().child("filterCompanies").child(name);
+        recyclerView = (RecyclerView) view.findViewById(R.id.ExploreCompanyRecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.getRecycledViewPool().clear();
 
