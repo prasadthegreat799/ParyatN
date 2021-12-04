@@ -11,27 +11,39 @@
 
     <group android:id="@+id/group3">
 
-        <item android:title="Rate Us" />
-        <item android:title="FeedBack" />
-        <item android:title="Share App" />
-    </group>
-    <group android:id="@+id/group4">
+        <item
+            android:icon="@drawable/saved_icon"
+            android:title="Saved Tours" />
 
-        <item android:title="About Us" />
-        <item android:title="Contact Us" />
-
+        <item android:title="My Bookings"
+            android:icon="@drawable/bookings_icon"/>
 
     </group>
-
-    <group android:id="@+id/group5">
-        <item android:title="Log Out" />
-    </group>
-
     <group android:id="@+id/group2">
 
         <item android:title="Student Partner" />
         <item android:title="Tourism Partner" />
 
+    </group>
+    <group android:id="@+id/group4">
+
+
+        <item android:title="Contact Us"
+            android:icon="@drawable/contactus_icon"/>
+
+        <item
+            android:icon="@drawable/feedback_icon"
+            android:title="FeedBack" />
+        <item
+            android:icon="@drawable/share_icon"
+            android:title="Share App" />
+
+
+    </group>
+
+    <group android:id="@+id/group5">
+        <item android:title="Log Out"
+            android:icon="@drawable/logout_icon"/>
     </group>
 
 
