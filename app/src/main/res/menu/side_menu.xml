@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/group0" />
+    <group android:id="@+id/group1">
+        <item
+            android:id="@+id/collageConnectMenu"
+            android:title="ParyatN" />
+    </group>
+
+
+    <group android:id="@+id/group3">
+
+        <item android:title="Rate Us" />
+        <item android:title="FeedBack" />
+        <item android:title="Share App" />
+    </group>
+    <group android:id="@+id/group4">
+
+        <item android:title="About Us" />
+        <item android:title="Contact Us" />
+
+
+    </group>
+
+    <group android:id="@+id/group5">
+        <item android:title="Log Out" />
+    </group>
+
+    <group android:id="@+id/group2">
+
+        <item android:title="Student Partner" />
+        <item android:title="Tourism Partner" />
+
+    </group>
+
+
+</menu>
