@@ -7,7 +7,7 @@
 
     <com.mikhaellopez.circularimageview.CircularImageView
         android:id="@+id/companyImg"
-        android:layout_width="100dp"
+        android:layout_width="70dp"
         android:layout_height="100dp"
         android:layout_margin="10dp"
         android:src="@drawable/profile_icon" />

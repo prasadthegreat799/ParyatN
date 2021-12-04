@@ -1,7 +1,13 @@
 package com.nappdeveloper.paryatn.Fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
@@ -10,10 +16,13 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.nappdeveloper.paryatn.Adapters.FilterAdapter;
@@ -21,7 +30,7 @@ import com.nappdeveloper.paryatn.Adapters.PopularCategoriesAdapter;
 import com.nappdeveloper.paryatn.Model.Model;
 import com.nappdeveloper.paryatn.R;
 
-public class homeFragment extends Fragment {
+public class homeFragment extends Fragment implements NavigationView.OnNavigationItemSelectedListener{
 
     RecyclerView filterRecyclerView;
     FilterAdapter filterAdapter;
@@ -31,6 +40,10 @@ public class homeFragment extends Fragment {
     PopularCategoriesAdapter popularCategoriesAdapter;
     DatabaseReference popularCategoriesDatabaseReference;
 
+    Toolbar toolbar;
+    DrawerLayout drawerLayout;
+    NavigationView navigationView;
+    ActionBarDrawerToggle actionBarDrawerToggle;
 
 
     @Override
@@ -39,6 +52,20 @@ public class homeFragment extends Fragment {
 
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
+
+
+
+        toolbar = view.findViewById(R.id.toolbar);
+        AppCompatActivity activity = (AppCompatActivity) getActivity();
+        activity.setSupportActionBar(toolbar);
+
+
+        drawerLayout = (DrawerLayout) view.findViewById(R.id.my_drawer_layout);
+        actionBarDrawerToggle = new ActionBarDrawerToggle(getActivity(), drawerLayout, toolbar, R.string.app_name, R.string.app_name);
+        drawerLayout.addDrawerListener(actionBarDrawerToggle);
+        actionBarDrawerToggle.syncState();
+        navigationView = (NavigationView) view.findViewById(R.id.navigationView);
+        navigationView.setNavigationItemSelectedListener(this);
 
         filterDatabaseReference = FirebaseDatabase.getInstance().getReference().child("filterNamesList");
         filterRecyclerView = (RecyclerView) view.findViewById(R.id.filterRecyclerView);
@@ -101,5 +128,19 @@ public class homeFragment extends Fragment {
         //Stops listening for data from firebase
         filterAdapter.stopListening();
         popularCategoriesAdapter.stopListening();
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+
+            case R.id.profileMenu:
+                Toast.makeText(getContext(),"Profile",Toast.LENGTH_SHORT).show();
+                break;
+
+            default:
+                Toast.makeText(getContext(), "Please,Select Any Option", Toast.LENGTH_SHORT).show();
+        }
+        return true;
     }
 }
