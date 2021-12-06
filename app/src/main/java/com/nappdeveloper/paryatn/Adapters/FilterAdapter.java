@@ -1,5 +1,7 @@
 package com.nappdeveloper.paryatn.Adapters;
 
+import android.annotation.SuppressLint;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,22 +26,29 @@ import com.nappdeveloper.paryatn.R;
 
 public class FilterAdapter extends FirebaseRecyclerAdapter<Model, FilterAdapter.Viewholder> {
 
+    private int selected_position = -1;
+
 
     public FilterAdapter(@NonNull FirebaseRecyclerOptions<Model> options) {
 
         super(options);
-
     }
 
     @Override
-    protected void onBindViewHolder(@NonNull FilterAdapter.Viewholder holder, int position, @NonNull Model model) {
+    protected void onBindViewHolder(@NonNull FilterAdapter.Viewholder holder, @SuppressLint("RecyclerView") int position, @NonNull Model model) {
 
         String name=model.getFilterName().toString();
         holder.filterNameTxt.setText(name);
+
+        if(selected_position==position){
+            holder.filterNameTxt.setTextColor(Color.parseColor("Red"));
+        }else{
+            holder.filterNameTxt.setTextColor(Color.parseColor("Black"));
+        }
+
         holder.filterNameTxt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Fragment fragment = new filterFragment();
                 FragmentManager fragmentManager = ((FragmentActivity) v.getContext()).getSupportFragmentManager(); // this is basically context of the class
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -51,6 +60,13 @@ public class FilterAdapter extends FirebaseRecyclerAdapter<Model, FilterAdapter.
                 fragmentTransaction.replace(R.id.filterLayout, fragment);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
+
+
+                int previousItem = selected_position;
+                selected_position = position;
+
+                notifyItemChanged(previousItem);
+                notifyItemChanged(position);
 
             }
         });
