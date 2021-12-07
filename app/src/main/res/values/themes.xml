@@ -43,6 +43,14 @@
         <item name="android:background">?attr/selectableItemBackground</item>
     </style>
 
+    <style name="HUGEText" parent="@android:style/Widget.TextView">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="smallText" parent="@android:style/Widget.TextView">
+        <item name="android:textStyle">normal</item>
+    </style>
+
 <!--    <style name="Theme.Main" parent="Theme.MaterialComponents.DayNight.NoActionBar">-->
 <!--        &lt;!&ndash; Primary brand color. &ndash;&gt;-->
 <!--        <item name="colorPrimary">@color/purple_500</item>-->

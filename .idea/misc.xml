@@ -4,7 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/drawable/background_bookbtn.xml" value="0.189453125" />
+        <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/drawable/background_bookbtn_white.xml" value="0.191015625" />
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/drawable/background_btn.xml" value="0.191015625" />
+        <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/drawable/background_btn_whitestroke.xml" value="0.191015625" />
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/drawable/background_curved.xml" value="0.189453125" />
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/drawable/background_profile.xml" value="0.159765625" />
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/drawable/background_search.xml" value="0.189453125" />
@@ -21,9 +23,11 @@
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/layout/activity_splash.xml" value="0.20625" />
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/layout/fragment_explore.xml" value="0.190625" />
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/layout/fragment_explore_company.xml" value="0.1734375" />
+        <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/layout/fragment_filter.xml" value="0.17683397683397684" />
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/layout/fragment_home.xml" value="0.190625" />
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/layout/fragment_profile.xml" value="0.190625" />
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/layout/nav_header.xml" value="0.17890625" />
+        <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/layout/popular_categories_layout.xml" value="0.17890625" />
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/layout/single_company_layout.xml" value="0.20625" />
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/layout/single_filter_layout.xml" value="0.162890625" />
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/layout/single_filtercompany_layout.xml" value="0.1734375" />

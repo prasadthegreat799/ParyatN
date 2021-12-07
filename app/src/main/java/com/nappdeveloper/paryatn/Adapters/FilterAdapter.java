@@ -10,6 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.core.widget.TextViewCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
@@ -27,7 +28,7 @@ import com.nappdeveloper.paryatn.R;
 
 public class FilterAdapter extends FirebaseRecyclerAdapter<Model, FilterAdapter.Viewholder> {
 
-    private int selected_position = -1;
+    private int selected_position = 0;
 
 
     public FilterAdapter(@NonNull FirebaseRecyclerOptions<Model> options) {
@@ -43,10 +44,12 @@ public class FilterAdapter extends FirebaseRecyclerAdapter<Model, FilterAdapter.
 
         if(selected_position==position){
             holder.filterNameTxt.setTextColor(Color.parseColor("White"));
+            TextViewCompat.setTextAppearance(holder.filterNameTxt, R.style.HUGEText);
             holder.linearLayout.setBackgroundResource(R.drawable.background_bookbtn);
         }else{
             holder.filterNameTxt.setTextColor(Color.parseColor("Black"));
-            holder.linearLayout.setBackgroundResource(R.color.browser_actions_bg_grey);
+            TextViewCompat.setTextAppearance(holder.filterNameTxt, R.style.smallText);
+            holder.linearLayout.setBackgroundResource(R.drawable.background_bookbtn_white);
         }
 
         holder.filterNameTxt.setOnClickListener(new View.OnClickListener() {
