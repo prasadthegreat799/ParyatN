@@ -107,7 +107,7 @@
             <FrameLayout
                 android:id="@+id/filterLayout"
                 android:layout_width="match_parent"
-                android:layout_height="300dp" />
+                android:layout_height="wrap_content" />
 
         </LinearLayout>
 
@@ -152,6 +152,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         app:headerLayout="@layout/nav_header"
+        app:itemTextColor="@drawable/side_menu_colors"
         app:menu="@menu/side_menu"
         tools:openDrawer="start" />
 

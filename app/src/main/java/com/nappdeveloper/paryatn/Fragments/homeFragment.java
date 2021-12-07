@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -65,6 +66,11 @@ public class homeFragment extends Fragment implements NavigationView.OnNavigatio
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
         navigationView = (NavigationView) view.findViewById(R.id.navigationView);
+        // get menu from navigationView
+        Menu menu = navigationView.getMenu();
+
+        // find MenuItem you want to change
+        MenuItem nav_sidemenu = menu.findItem(R.id.title_sideMenu);
         navigationView.setNavigationItemSelectedListener(this);
 
         filterDatabaseReference = FirebaseDatabase.getInstance().getReference().child("filterNamesList");

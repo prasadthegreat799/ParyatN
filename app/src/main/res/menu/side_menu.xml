@@ -4,7 +4,7 @@
     <group android:id="@+id/group0" />
     <group android:id="@+id/group1">
         <item
-            android:id="@+id/collageConnectMenu"
+            android:id="@+id/title_sideMenu"
             android:title="ParyatN" />
     </group>
 
@@ -21,7 +21,7 @@
     </group>
     <group android:id="@+id/group2">
 
-        <item android:title="Student Partner" />
+        <item android:title="Student Partner"  />
         <item android:title="Tourism Partner" />
 
     </group>

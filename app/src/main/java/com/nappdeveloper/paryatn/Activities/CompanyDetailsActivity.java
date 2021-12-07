@@ -32,6 +32,8 @@ public class CompanyDetailsActivity extends AppCompatActivity {
     TextView companyOverviewTxt, companyDetailsTxt, companyReviewsTxt, companyTripCostTxt, companyTripDurationTxt, companyTripDistanceTxt;
     TextView companyDataTxt;
 
+    ImageView backBtn, favBtn, imageView1, imageView2;
+
     View v1, v2, v3, v4;
 
     @Override
@@ -49,6 +51,11 @@ public class CompanyDetailsActivity extends AppCompatActivity {
         v3 = (View) findViewById(R.id.ul3);
         v4 = (View) findViewById(R.id.ul4);
 
+        backBtn = (ImageView) findViewById(R.id.backBtn);
+        favBtn = (ImageView) findViewById(R.id.favBtn);
+        favBtn.setTag("fav_img");
+
+
         companyImage = (ImageView) findViewById(R.id.CompanyLogoImg);
         companyNameTxt = (TextView) findViewById(R.id.companyNameTxt);
         companyOverviewTxt = (TextView) findViewById(R.id.companyOverviewTxt);
@@ -59,6 +66,22 @@ public class CompanyDetailsActivity extends AppCompatActivity {
         companyTripDistanceTxt = (TextView) findViewById(R.id.companyTripDistanceTxt);
 
         companyDataTxt=(TextView) findViewById(R.id.companyDataTxt);
+
+        favBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String imageName = String.valueOf(favBtn.getTag());
+                if (imageName == "fav_img") {
+                    favBtn.setImageResource(R.drawable.ic_baseline_favorite_24);
+                    favBtn.setTag("fav_img2");
+                }
+
+                else {
+                    favBtn.setImageResource(R.drawable.ic_baseline_favorite_border_24);
+                    favBtn.setTag("fav_img");
+                }
+            }
+        });
 
 
         companyOverviewTxt.setOnClickListener(new View.OnClickListener() {

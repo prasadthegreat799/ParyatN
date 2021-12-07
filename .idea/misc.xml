@@ -12,17 +12,24 @@
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/drawable/ic_baseline_location_on_24.xml" value="0.189453125" />
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/drawable/ic_baseline_star_half_15.xml" value="0.189453125" />
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/drawable/profile_stats_bg.xml" value="0.189453125" />
+        <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/drawable/side_menu_colors.xml" value="0.191015625" />
+        <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/drawable/sphere_bg_white.xml" value="0.191015625" />
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/layout/activity_company_details.xml" value="0.2" />
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/layout/activity_main.xml" value="0.20625" />
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/layout/activity_register_user.xml" value="0.20625" />
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/layout/activity_sign_in.xml" value="0.152" />
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/layout/activity_splash.xml" value="0.20625" />
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/layout/fragment_explore.xml" value="0.190625" />
+        <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/layout/fragment_explore_company.xml" value="0.1734375" />
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/layout/fragment_home.xml" value="0.190625" />
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/layout/fragment_profile.xml" value="0.190625" />
+        <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/layout/nav_header.xml" value="0.17890625" />
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/layout/single_company_layout.xml" value="0.20625" />
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/layout/single_filter_layout.xml" value="0.162890625" />
+        <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/layout/single_filtercompany_layout.xml" value="0.1734375" />
+        <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/layout/single_tour_layout.xml" value="0.1734375" />
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/menu/bottom_menu.xml" value="0.117578125" />
+        <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/menu/side_menu.xml" value="0.175" />
         <entry key="..\:/Users/Neela Prasad/AndroidStudioProjects/paryatan/app/src/main/res/drawable-v24/toolbar_bg.xml" value="0.19166666666666668" />
         <entry key="..\:/Users/Neela Prasad/AndroidStudioProjects/paryatan/app/src/main/res/drawable/background_search.xml" value="0.19166666666666668" />
         <entry key="..\:/Users/Neela Prasad/AndroidStudioProjects/paryatan/app/src/main/res/drawable/toolbar_bg.xml" value="0.19166666666666668" />
@@ -38,18 +45,16 @@
         <entry key="..\:/Users/Neela Prasad/AndroidStudioProjects/paryatan/app/src/main/res/layout/fragment_home.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Neela Prasad/AndroidStudioProjects/paryatan/app/src/main/res/layout/fragment_profile.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Neela Prasad/AndroidStudioProjects/paryatan/app/src/main/res/layout/fragment_tours.xml" value="0.15081521739130435" />
-        <entry key="..\:/Users/Neela Prasad/AndroidStudioProjects/paryatan/app/src/main/res/layout/nav_header.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Neela Prasad/AndroidStudioProjects/paryatan/app/src/main/res/layout/popular_categories_layout.xml" value="0.15081521739130435" />
         <entry key="..\:/Users/Neela Prasad/AndroidStudioProjects/paryatan/app/src/main/res/layout/single_company_layout.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Neela Prasad/AndroidStudioProjects/paryatan/app/src/main/res/layout/single_filter_layout.xml" value="0.15081521739130435" />
         <entry key="..\:/Users/Neela Prasad/AndroidStudioProjects/paryatan/app/src/main/res/layout/single_filtercompany_layout.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Neela Prasad/AndroidStudioProjects/paryatan/app/src/main/res/layout/single_tour_layout.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Neela Prasad/AndroidStudioProjects/paryatan/app/src/main/res/menu/bottom_menu.xml" value="0.17552083333333332" />
-        <entry key="..\:/Users/Neela Prasad/AndroidStudioProjects/paryatan/app/src/main/res/menu/side_menu.xml" value="0.17552083333333332" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -41,9 +42,11 @@ public class FilterAdapter extends FirebaseRecyclerAdapter<Model, FilterAdapter.
         holder.filterNameTxt.setText(name);
 
         if(selected_position==position){
-            holder.filterNameTxt.setTextColor(Color.parseColor("Red"));
+            holder.filterNameTxt.setTextColor(Color.parseColor("White"));
+            holder.linearLayout.setBackgroundResource(R.drawable.background_bookbtn);
         }else{
             holder.filterNameTxt.setTextColor(Color.parseColor("Black"));
+            holder.linearLayout.setBackgroundResource(R.color.browser_actions_bg_grey);
         }
 
         holder.filterNameTxt.setOnClickListener(new View.OnClickListener() {
@@ -92,10 +95,10 @@ public class FilterAdapter extends FirebaseRecyclerAdapter<Model, FilterAdapter.
     class Viewholder extends RecyclerView.ViewHolder {
 
         TextView filterNameTxt;
-
+        LinearLayout linearLayout;
         public Viewholder(@NonNull View itemView) {
             super(itemView);
-
+            linearLayout = (LinearLayout) itemView.findViewById(R.id.filter_element);
             filterNameTxt = (TextView) itemView.findViewById(R.id.filterNameTxt);
 
         }
