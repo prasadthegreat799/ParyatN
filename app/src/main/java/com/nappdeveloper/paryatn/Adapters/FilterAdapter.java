@@ -52,7 +52,7 @@ public class FilterAdapter extends FirebaseRecyclerAdapter<Model, FilterAdapter.
             holder.linearLayout.setBackgroundResource(R.drawable.background_bookbtn_white);
         }
 
-        holder.filterNameTxt.setOnClickListener(new View.OnClickListener() {
+        holder.linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Fragment fragment = new filterFragment();

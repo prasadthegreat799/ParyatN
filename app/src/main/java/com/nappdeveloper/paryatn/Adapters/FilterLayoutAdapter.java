@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
@@ -36,7 +37,7 @@ public class FilterLayoutAdapter extends FirebaseRecyclerAdapter<Model, FilterLa
             Glide.with(holder.companyImage.getContext()).load(model.getCompanyLogo()).into(holder.companyImage);
             holder.companyName.setText(model.getCompanyName());
 
-            holder.companyImage.setOnClickListener(new View.OnClickListener() {
+            holder.companyCard.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent=new Intent(v.getContext(), CompanyDetailsActivity.class);
@@ -69,10 +70,12 @@ public class FilterLayoutAdapter extends FirebaseRecyclerAdapter<Model, FilterLa
 
         ImageView companyImage;
         TextView companyName;
+        CardView companyCard;
 
         public Viewholder(@NonNull View itemView) {
             super(itemView);
 
+            companyCard = (CardView) itemView.findViewById(R.id.company_card);
             companyImage = (ImageView) itemView.findViewById(R.id.companyImg);
             companyName = (TextView) itemView.findViewById(R.id.companyNameTxt);
 

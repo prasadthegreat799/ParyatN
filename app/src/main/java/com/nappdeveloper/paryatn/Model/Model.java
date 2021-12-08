@@ -2,18 +2,19 @@ package com.nappdeveloper.paryatn.Model;
 
 public class Model {
 
-    String companyLogo, companyName, companyLocation, companyType, companyRating;
+    String companyLogo, companyName, companyLocation, companyType, companyRating, companyOverview;
     String filterName;
     String imageId,imageCategory;
 
     public Model() {}
 
-    public Model(String companyLogo, String companyName, String companyLocation, String companyType, String companyRating, String filterName, String imageId, String imageCategory) {
+    public Model(String companyLogo, String companyName, String companyLocation, String companyType, String companyRating, String companyOverview, String filterName, String imageId, String imageCategory) {
         this.companyLogo = companyLogo;
         this.companyName = companyName;
         this.companyLocation = companyLocation;
         this.companyType = companyType;
         this.companyRating = companyRating;
+        this.companyOverview = companyOverview;
         this.filterName = filterName;
         this.imageId = imageId;
         this.imageCategory = imageCategory;
@@ -57,6 +58,14 @@ public class Model {
 
     public void setCompanyRating(String companyRating) {
         this.companyRating = companyRating;
+    }
+
+    public String getCompanyOverview() {
+        return companyOverview;
+    }
+
+    public void setCompanyOverview(String companyOverview) {
+        this.companyOverview = companyOverview;
     }
 
     public String getFilterName() {

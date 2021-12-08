@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/drawable/background_black_stroke.xml" value="0.141796875" />
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/drawable/background_bookbtn.xml" value="0.189453125" />
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/drawable/background_bookbtn_white.xml" value="0.191015625" />
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/drawable/background_btn.xml" value="0.191015625" />
@@ -15,6 +16,7 @@
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/drawable/ic_baseline_star_half_15.xml" value="0.189453125" />
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/drawable/profile_stats_bg.xml" value="0.189453125" />
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/drawable/side_menu_colors.xml" value="0.191015625" />
+        <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/drawable/sphere_bg_pink.xml" value="0.191015625" />
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/drawable/sphere_bg_white.xml" value="0.191015625" />
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/layout/activity_company_details.xml" value="0.2" />
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/layout/activity_main.xml" value="0.20625" />

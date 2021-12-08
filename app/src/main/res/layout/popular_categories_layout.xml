@@ -2,16 +2,27 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
 
     <com.mikhaellopez.circularimageview.CircularImageView
         android:id="@+id/companyImg"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="5dp"
+        android:adjustViewBounds="true"
+        android:layout_marginEnd="5dp"
         android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        app:civ_shadow_gravity="center"
+        android:background="@drawable/sphere_bg_white"
+        app:civ_border="true"
+        app:civ_border_width="1dp"
+        app:civ_border_color="@color/browser_actions_bg_grey"
+        app:civ_shadow="true"
+        app:civ_shadow_radius="3dp"
+        app:civ_shadow_color="@color/browser_actions_bg_grey"
         android:src="@drawable/profile_icon" />
 
     <TextView
@@ -20,7 +31,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center"
-        android:layout_marginTop="5dp"
         android:text="Company Name"
         android:textColor="@color/black"
         android:textStyle="bold" />

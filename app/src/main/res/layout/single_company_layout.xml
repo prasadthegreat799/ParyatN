@@ -7,9 +7,9 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
         android:backgroundTint="@color/white"
@@ -21,24 +21,24 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="5dp"
-            android:padding="10dp"
+            android:padding="5dp"
             android:orientation="horizontal">
 
-            <com.mikhaellopez.circularimageview.CircularImageView
+            <ImageView
                 android:id="@+id/CompanyLogoImg"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                app:civ_border="true"
-                app:civ_border_color="@color/purple_200"
-                app:civ_border_width="1dp"
-                android:layout_gravity="center_vertical"
+                android:layout_width="120dp"
+                android:layout_height="140dp"
+                android:padding="2dp"
+                android:background="@drawable/background_blue_stroke"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
                 android:src="@drawable/bookmark_icon" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:layout_gravity="center_vertical"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
                 android:gravity="center_vertical"
                 android:orientation="vertical">
 
@@ -55,7 +55,6 @@
                     android:id="@+id/CompanyTypeTxt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
                     android:text="Company Type"
                     android:textColor="@color/black"
                     android:textSize="13sp"/>
@@ -97,6 +96,13 @@
 
                 </LinearLayout>
 
+                <TextView
+                    android:id="@+id/CompanyDescTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Company Description"
+                    android:textSize="12sp"/>
 
             </LinearLayout>
         </LinearLayout>

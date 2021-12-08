@@ -3,10 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="160dp"
     android:layout_height="wrap_content"
-    android:layout_marginTop="10dp"
     android:layout_marginStart="5dp"
-    android:layout_marginBottom="10dp"
     android:layout_marginEnd="5dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:id="@+id/company_card"
     app:cardCornerRadius="10dp">
 
     <LinearLayout
@@ -21,7 +22,10 @@
             android:layout_height="150dp"
             android:scaleType="fitXY"
             android:adjustViewBounds="true"
-            android:layout_margin="5dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="3dp"
             android:src="@drawable/profile_icon" />
 
         <TextView
@@ -32,7 +36,7 @@
             android:gravity="center"
             android:layout_margin="5dp"
             android:text="Company Name"
-            android:textSize="20dp"
+            android:textSize="18dp"
             android:textColor="@color/black"
             android:textStyle="bold" />
 
@@ -40,7 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginBottom="5dp"
+            android:layout_marginBottom="8dp"
             android:textSize="12sp"
             android:text="Starting at $0000" />
 

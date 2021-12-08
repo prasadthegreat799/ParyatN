@@ -10,7 +10,10 @@
         android:id="@+id/SearchCompaniesEdit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/background_search"
         android:drawableRight="@drawable/search_icon"
         android:drawableTint="@color/black"
@@ -22,20 +25,19 @@
 
 
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/exploreFilterRecyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginEnd="30dp"
-            android:scrollbars="none"
-            android:overScrollMode="never"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/exploreFilterRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:scrollbars="none"
+        android:overScrollMode="never"/>
 
     <FrameLayout
         android:id="@+id/exploreFilterLayout"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

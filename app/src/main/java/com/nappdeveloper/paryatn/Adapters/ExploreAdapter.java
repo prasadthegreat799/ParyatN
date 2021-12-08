@@ -34,6 +34,11 @@ public class ExploreAdapter extends FirebaseRecyclerAdapter<Model, ExploreAdapte
         holder.companyRating.setText(model.getCompanyRating());
         holder.companyLocation.setText(model.getCompanyLocation());
 
+        if (model.getCompanyOverview() != null && model.getCompanyOverview().length() >= 80) {
+            String cDesc = model.getCompanyOverview().toString();
+            String cDescFinal = cDesc.substring(0, 79);
+            holder.companyDescTxt.setText(cDescFinal+" ....");
+        }
     }
 
     @Override
@@ -55,17 +60,18 @@ public class ExploreAdapter extends FirebaseRecyclerAdapter<Model, ExploreAdapte
     //we need view holder to hold each objet form recyclerview and to show it in recyclerview
     class Viewholder extends RecyclerView.ViewHolder {
 
-        CircularImageView companyImage;
-        TextView companyName, companyType, companyRating, companyLocation;
+        ImageView companyImage;
+        TextView companyName, companyType, companyRating, companyLocation, companyDescTxt;
 
         public Viewholder(@NonNull View itemView) {
             super(itemView);
 
-            companyImage = (CircularImageView) itemView.findViewById(R.id.CompanyLogoImg);
+            companyImage = (ImageView) itemView.findViewById(R.id.CompanyLogoImg);
             companyName = (TextView) itemView.findViewById(R.id.ComapanyNameTxt);
             companyType = (TextView) itemView.findViewById(R.id.CompanyTypeTxt);
             companyRating = (TextView) itemView.findViewById(R.id.CompanyRatingTxt);
             companyLocation = (TextView) itemView.findViewById(R.id.CompanyLocationTxt);
+            companyDescTxt = (TextView) itemView.findViewById(R.id.CompanyDescTxt);
 
         }
     }
