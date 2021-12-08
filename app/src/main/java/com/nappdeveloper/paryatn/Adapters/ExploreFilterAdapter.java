@@ -1,12 +1,15 @@
 package com.nappdeveloper.paryatn.Adapters;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.core.widget.TextViewCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
@@ -22,6 +25,7 @@ import com.nappdeveloper.paryatn.R;
 
 public class ExploreFilterAdapter extends FirebaseRecyclerAdapter<Model, ExploreFilterAdapter.Viewholder> {
 
+    int selected_position = 0;
 
     public ExploreFilterAdapter(@NonNull FirebaseRecyclerOptions<Model> options) {
 
@@ -34,6 +38,17 @@ public class ExploreFilterAdapter extends FirebaseRecyclerAdapter<Model, Explore
 
         String name=model.getFilterName().toString();
         holder.filterNameTxt.setText(name);
+
+        if(selected_position == position){
+            holder.filterNameTxt.setTextColor(Color.parseColor("Black"));
+            TextViewCompat.setTextAppearance(holder.filterNameTxt, R.style.HUGEText);
+            holder.linearLayout.setBackgroundResource(R.drawable.background_bookbtn_white);
+        }else{
+            holder.filterNameTxt.setTextColor(Color.parseColor("White"));
+            TextViewCompat.setTextAppearance(holder.filterNameTxt, R.style.smallText);
+            holder.linearLayout.setBackgroundResource(R.drawable.background_btn_whitestroke);
+        }
+
         holder.filterNameTxt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,6 +64,12 @@ public class ExploreFilterAdapter extends FirebaseRecyclerAdapter<Model, Explore
                 fragmentTransaction.replace(R.id.exploreFilterLayout, fragment);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
+
+                int previousItem = selected_position;
+                selected_position = position;
+
+                notifyItemChanged(previousItem);
+                notifyItemChanged(position);
 
             }
         });
@@ -74,10 +95,12 @@ public class ExploreFilterAdapter extends FirebaseRecyclerAdapter<Model, Explore
     class Viewholder extends RecyclerView.ViewHolder {
 
         TextView filterNameTxt;
+        LinearLayout linearLayout;
 
         public Viewholder(@NonNull View itemView) {
             super(itemView);
 
+            linearLayout = (LinearLayout) itemView.findViewById(R.id.filter_element);
             filterNameTxt = (TextView) itemView.findViewById(R.id.filterNameTxt);
 
         }
