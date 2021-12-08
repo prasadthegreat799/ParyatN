@@ -28,13 +28,16 @@
     <group android:id="@+id/group4">
 
 
-        <item android:title="Contact Us"
+        <item
+            android:id="@+id/contactusSliderMenu"
+            android:title="Contact Us"
             android:icon="@drawable/contactus_icon"/>
 
         <item
             android:icon="@drawable/feedback_icon"
             android:title="FeedBack" />
         <item
+            android:id="@+id/shareSliderMenu"
             android:icon="@drawable/share_icon"
             android:title="Share App" />
 
@@ -42,7 +45,9 @@
     </group>
 
     <group android:id="@+id/group5">
-        <item android:title="Log Out"
+        <item
+            android:id="@+id/logoutSliderMenu"
+            android:title="Log Out"
             android:icon="@drawable/logout_icon"/>
     </group>
 

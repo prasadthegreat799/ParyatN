@@ -1,6 +1,7 @@
 package com.nappdeveloper.paryatn.Fragments;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -23,9 +24,16 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.nappdeveloper.paryatn.Activities.splashActivity;
 import com.nappdeveloper.paryatn.Adapters.FilterAdapter;
 import com.nappdeveloper.paryatn.Adapters.PopularCategoriesAdapter;
 import com.nappdeveloper.paryatn.Model.Model;
@@ -55,11 +63,9 @@ public class homeFragment extends Fragment implements NavigationView.OnNavigatio
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
 
-
         toolbar = view.findViewById(R.id.toolbar);
         AppCompatActivity activity = (AppCompatActivity) getActivity();
         activity.setSupportActionBar(toolbar);
-
 
         drawerLayout = (DrawerLayout) view.findViewById(R.id.my_drawer_layout);
         actionBarDrawerToggle = new ActionBarDrawerToggle(getActivity(), drawerLayout, toolbar, R.string.app_name, R.string.app_name);
@@ -143,7 +149,52 @@ public class homeFragment extends Fragment implements NavigationView.OnNavigatio
             case R.id.profileMenu:
                 Toast.makeText(getContext(),"Profile",Toast.LENGTH_SHORT).show();
                 break;
+            case R.id.contactusSliderMenu:
+                try {
+                    Intent intent = new Intent (Intent.ACTION_VIEW , Uri.parse("mailto:" + "paryatn.info@gmail.com"));
+                    intent.putExtra(Intent.EXTRA_SUBJECT, "your subject goes here...");
+                    intent.putExtra(Intent.EXTRA_TEXT, "Complaint From ParyatN User App");
+                    startActivity(intent);
+                } catch(Exception e) {
+                    Toast.makeText(getContext(), "Sorry...You don't have any mail app", Toast.LENGTH_SHORT).show();
+                    e.printStackTrace();
+                }
+                break;
 
+            case R.id.shareSliderMenu:
+                Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+                sharingIntent.setType("text/plain");
+                String shareBody ="Hey Hi," +
+                        "Let Me Introduce you to this app called ParyatN.\n" +
+                        "        This is an amazing app that teaches you practical knowledge through tours of industries.";
+                sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "ParyatN");
+                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
+                startActivity(Intent.createChooser(sharingIntent, "Share via"));
+                break;
+
+            case R.id.logoutSliderMenu:
+                GoogleSignInOptions gso = new GoogleSignInOptions.
+                        Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).
+                        build();
+                GoogleSignInClient googleSignInClient = GoogleSignIn.getClient(getActivity(), gso);
+                googleSignInClient.signOut().addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if (task.isSuccessful()) {
+
+                            //User Signout
+                            FirebaseAuth.getInstance().signOut();
+                            FirebaseAuth.getInstance().getTenantId();
+
+                            //Redirecting to LoginActivity
+                            Intent intent = new Intent(getContext(), splashActivity.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                            startActivity(intent);
+                        }
+
+                    }
+                });
+                break;
             default:
                 Toast.makeText(getContext(), "Please,Select Any Option", Toast.LENGTH_SHORT).show();
         }
