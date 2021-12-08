@@ -1,11 +1,13 @@
 package com.nappdeveloper.paryatn.Fragments;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -36,6 +38,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.nappdeveloper.paryatn.Activities.splashActivity;
 import com.nappdeveloper.paryatn.Adapters.FilterAdapter;
 import com.nappdeveloper.paryatn.Adapters.PopularCategoriesAdapter;
+import com.nappdeveloper.paryatn.MainActivity;
 import com.nappdeveloper.paryatn.Model.Model;
 import com.nappdeveloper.paryatn.R;
 
@@ -102,7 +105,6 @@ public class homeFragment extends Fragment implements NavigationView.OnNavigatio
         fragmentTransaction.replace(R.id.filterLayout, fragment);
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
-
 
         //Firebase Recycler Options to get the data form firebase database using model class and reference
         FirebaseRecyclerOptions<Model> options =
@@ -200,4 +202,5 @@ public class homeFragment extends Fragment implements NavigationView.OnNavigatio
         }
         return true;
     }
+
 }
