@@ -2,6 +2,7 @@ package com.nappdeveloper.paryatn.Fragments;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -52,6 +53,7 @@ public class homeFragment extends Fragment implements NavigationView.OnNavigatio
     PopularCategoriesAdapter popularCategoriesAdapter;
     DatabaseReference popularCategoriesDatabaseReference;
 
+
     Toolbar toolbar;
     DrawerLayout drawerLayout;
     NavigationView navigationView;
@@ -74,7 +76,11 @@ public class homeFragment extends Fragment implements NavigationView.OnNavigatio
         actionBarDrawerToggle = new ActionBarDrawerToggle(getActivity(), drawerLayout, toolbar, R.string.app_name, R.string.app_name);
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
+
         navigationView = (NavigationView) view.findViewById(R.id.navigationView);
+        navigationView.setItemIconTintList(null);
+        navigationView.bringToFront();
+        navigationView.setCheckedItem(R.id.title_sideMenu);
         // get menu from navigationView
         Menu menu = navigationView.getMenu();
 
@@ -166,7 +172,7 @@ public class homeFragment extends Fragment implements NavigationView.OnNavigatio
             case R.id.shareSliderMenu:
                 Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
                 sharingIntent.setType("text/plain");
-                String shareBody ="Hey Hi," +
+                String shareBody ="Hey Hi, " +
                         "Let Me Introduce you to this app called ParyatN.\n" +
                         "        This is an amazing app that teaches you practical knowledge through tours of industries.";
                 sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "ParyatN");

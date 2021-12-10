@@ -34,6 +34,12 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <style name="NavDrawer.Item" parent="TextAppearance.AppCompat">
+        <item name="android:textStyle">bold</item>
+        <item name="android:color">@color/purple_500</item>
+        <item name="android:itemBackground">@color/rating_yellow</item>
+    </style>
+
     <style name="SelectableItemTheme">
         <item name="colorControlHighlight">@color/white</item>
     </style>
