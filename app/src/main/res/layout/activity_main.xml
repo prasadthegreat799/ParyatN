@@ -73,16 +73,16 @@
 
             -->
 
-            <com.google.android.material.bottomnavigation.BottomNavigationView
-                android:id="@+id/BottomNavigationView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                app:labelVisibilityMode="labeled"
-                app:itemIconTint="@drawable/bottomnav_colors"
-                app:itemTextAppearanceActive="@style/BottomNavigation.ActiveItemTextAppearance"
-                app:itemTextColor="@drawable/bottomnav_colors"
-                app:menu="@menu/bottom_menu" />
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/BottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemIconTint="@drawable/bottomnav_colors"
+        app:itemTextAppearanceActive="@style/BottomNavigation.ActiveItemTextAppearance"
+        app:itemTextColor="@drawable/bottomnav_colors"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_menu" />
 
     <!---
         </LinearLayout>

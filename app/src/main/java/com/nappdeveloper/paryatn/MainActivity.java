@@ -37,12 +37,11 @@ public class MainActivity extends AppCompatActivity {
         v1 = findViewById(R.id.view1);
         v2 = findViewById(R.id.view2);
         v3 = findViewById(R.id.view3);
-        v4 = findViewById(R.id.view4); */
+        v4 = findViewById(R.id.view4);
 
-        relativeLayout_main = (RelativeLayout) findViewById(R.id.main_layout);
+        relativeLayout_main = (RelativeLayout) findViewById(R.id.main_layout); */
 
         bottomNavigationView = (BottomNavigationView) findViewById(R.id.BottomNavigationView);
-        bottomNavigationView.setBackground(null);
         Menu menuNav = bottomNavigationView.getMenu();
         getSupportFragmentManager().beginTransaction().replace(R.id.StudentFragmentContainer, new homeFragment()).commit();
 
