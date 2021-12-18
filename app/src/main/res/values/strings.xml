@@ -3,4 +3,31 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="register_string">Register Here to continue with ParyatN</string>
     <string name="share_body"></string>
+
+
+    <!--- String for onboarding screen -->
+
+    <!--- titles -->
+    <string name="first_slide_title">Search Your industry</string>
+    <string name="second_slide_title">Book your tour</string>
+    <string name="third_slide_title">Make your Payment</string>
+    <string name="fourth_slide_title">Sit Back And Enjoy</string>
+
+    <!-- Description -->
+    <string name="first_slide_desc">Search By Text. This tool can search all saved tours, markers and waypoints.</string>
+    <string name="second_slide_desc">2nd slide desc goes here</string>
+    <string name="third_slide_desc">3rd slide desc goes here</string>
+    <string name="fourth_slide_desc">4th slide desc goes here</string>
+
+    <!--- Buttons -->
+    <string name="skip_btn">Skip</string>
+    <string name="next_btn">Next</string>
+    <string name="let_get_started">Lets Get Started</string>
+
+
+    <!---Home Fragment Strings -->
+    <string name="tour_planner">Dont Know how to use ParyatN ? ParyatN Guide</string>
+
+
+
 </resources>

@@ -15,6 +15,9 @@
         android:theme="@style/Theme.Paryatan"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".Activities.OnBoarding"
+            android:exported="false" />
+        <activity
             android:name=".Activities.CompanyDetailsActivity"
             android:exported="false" />
         <activity

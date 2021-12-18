@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <group android:id="@+id/group0" />
-    <group android:id="@+id/group1" android:checkableBehavior="single">
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="single">
         <item
             android:id="@+id/title_sideMenu"
             android:title="ParyatN" />
@@ -11,17 +13,20 @@
 
     <item android:title="Tours">
         <menu>
-            <group android:id="@+id/group3" android:checkableBehavior="single">
+            <group
+                android:id="@+id/group3"
+                android:checkableBehavior="single">
                 <item
                     android:icon="@drawable/ic_baseline_favorite_24"
-                    app:iconTint="@color/purple_500"
                     android:title="Favourites"
+                    app:iconTint="@color/purple_500"
                     app:showAsAction="always" />
 
-                <item android:title="Bookings"
-                    app:iconTint="@color/green"
+                <item
                     android:icon="@drawable/bookings_icon"
-                    app:showAsAction="always"/>
+                    android:title="Bookings"
+                    app:iconTint="@color/green"
+                    app:showAsAction="always" />
 
             </group>
         </menu>
@@ -30,9 +35,11 @@
 
     <item android:title="Partners">
         <menu>
-            <group android:id="@+id/group2" android:checkableBehavior="single">
+            <group
+                android:id="@+id/group2"
+                android:checkableBehavior="single">
 
-                <item android:title="Student Partner"  />
+                <item android:title="Student Partner" />
                 <item android:title="Tourism Partner" />
 
             </group>
@@ -42,38 +49,42 @@
     <item android:title="Help">
         <menu>
 
-            <group android:id="@+id/group4" android:checkableBehavior="single">
+            <group
+                android:id="@+id/group4"
+                android:checkableBehavior="single">
 
                 <item
                     android:id="@+id/contactusSliderMenu"
-                    android:title="Contact Us"
                     android:icon="@drawable/contactus_icon"
+                    android:title="Contact Us"
                     app:iconTint="@color/rating_yellow"
-                    app:showAsAction="never"/>
+                    app:showAsAction="never" />
 
                 <item
                     android:icon="@drawable/feedback_icon"
-                    app:iconTint="@color/help_blue"
                     android:title="FeedBack"
-                    app:showAsAction="never"/>
+                    app:iconTint="@color/help_blue"
+                    app:showAsAction="never" />
                 <item
                     android:id="@+id/shareSliderMenu"
                     android:icon="@drawable/share_icon"
-                    app:iconTint="@color/black"
                     android:title="Share App"
-                    app:showAsAction="never"/>
+                    app:iconTint="@color/black"
+                    app:showAsAction="never" />
 
             </group>
 
         </menu>
     </item>
 
-    <group android:id="@+id/group5" android:checkableBehavior="single">
+    <group
+        android:id="@+id/group5"
+        android:checkableBehavior="single">
         <item
             android:id="@+id/logoutSliderMenu"
-            android:title="Log Out"
             android:icon="@drawable/logout_icon"
-            app:iconTint="@color/pale_red"/>
+            android:title="Log Out"
+            app:iconTint="@color/pale_red" />
     </group>
 
 
