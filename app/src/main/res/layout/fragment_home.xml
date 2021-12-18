@@ -9,8 +9,7 @@
     android:fitsSystemWindows="true"
     android:orientation="vertical"
     tools:context=".Fragments.homeFragment"
-    tools:ignore="HardcodedText"
-    tools:openDrawer="start">
+    tools:ignore="HardcodedText">
 
     <LinearLayout
         android:layout_width="match_parent"
