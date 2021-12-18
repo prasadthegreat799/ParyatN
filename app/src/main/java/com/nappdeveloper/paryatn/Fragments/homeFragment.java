@@ -26,6 +26,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -34,8 +35,12 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.mikhaellopez.circularimageview.CircularImageView;
 import com.nappdeveloper.paryatn.Activities.splashActivity;
 import com.nappdeveloper.paryatn.Adapters.FilterAdapter;
 import com.nappdeveloper.paryatn.Adapters.PopularCategoriesAdapter;
@@ -59,6 +64,8 @@ public class homeFragment extends Fragment implements NavigationView.OnNavigatio
     NavigationView navigationView;
     ActionBarDrawerToggle actionBarDrawerToggle;
 
+    CircularImageView profileImg;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -73,6 +80,7 @@ public class homeFragment extends Fragment implements NavigationView.OnNavigatio
         activity.setSupportActionBar(toolbar);
         activity.getSupportActionBar().setDisplayShowTitleEnabled(false);
 
+        profileImg = (CircularImageView) view.findViewById(R.id.HomeProfileImg);
         drawerLayout = (DrawerLayout) view.findViewById(R.id.my_drawer_layout);
         actionBarDrawerToggle = new ActionBarDrawerToggle(getActivity(), drawerLayout, toolbar, R.string.app_name, R.string.app_name);
         toolbar.setNavigationIcon(R.drawable.ic_baseline_account_balance_24);
@@ -105,6 +113,10 @@ public class homeFragment extends Fragment implements NavigationView.OnNavigatio
 
 
 
+
+
+
+
         Fragment fragment = new filterFragment();
         FragmentManager fragmentManager = ((FragmentActivity) view.getContext()).getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -131,6 +143,29 @@ public class homeFragment extends Fragment implements NavigationView.OnNavigatio
 
         popularCategoriesAdapter= new PopularCategoriesAdapter(pcOptions);
         popularCategoriesRecyclerView.setAdapter(popularCategoriesAdapter);
+
+
+
+        String userId = GoogleSignIn.getLastSignedInAccount(getContext()).getId().toString();
+        FirebaseDatabase.getInstance().getReference("users").child(userId)
+                .addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        if (getActivity() == null) {
+                            return;
+                        }
+                        String imageLink = snapshot.child("profilePic").getValue().toString();
+
+
+                        Glide.with(getActivity()).load(imageLink).into(profileImg);
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+
 
         return view;
 
