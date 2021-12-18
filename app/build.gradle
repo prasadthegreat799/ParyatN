@@ -61,4 +61,6 @@ dependencies {
     //Circular imageView
     implementation 'com.mikhaellopez:circularimageview:4.3.0'
 
+    implementation 'com.synnapps:carouselview:0.1.5'
+
 }

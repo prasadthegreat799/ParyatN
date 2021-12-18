@@ -5,7 +5,7 @@
     android:padding="10dp">
 
     <!--<solid android:color="#EDEBEB" />-->
-    <solid android:color="#EDEEEF" />
+    <solid android:color="@color/browser_actions_bg_grey" />
     <corners
         android:radius="30dp" />
 </shape>

@@ -24,6 +24,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
@@ -47,6 +48,8 @@ import com.nappdeveloper.paryatn.Adapters.PopularCategoriesAdapter;
 import com.nappdeveloper.paryatn.MainActivity;
 import com.nappdeveloper.paryatn.Model.Model;
 import com.nappdeveloper.paryatn.R;
+import com.synnapps.carouselview.CarouselView;
+import com.synnapps.carouselview.ImageListener;
 
 public class homeFragment extends Fragment implements NavigationView.OnNavigationItemSelectedListener{
 
@@ -64,6 +67,9 @@ public class homeFragment extends Fragment implements NavigationView.OnNavigatio
     NavigationView navigationView;
     ActionBarDrawerToggle actionBarDrawerToggle;
 
+    CarouselView carouselView;
+
+    int[] sampleImages = {R.drawable.microsoft, R.drawable.microsoft, R.drawable.microsoft};
     CircularImageView profileImg;
 
 
@@ -87,6 +93,11 @@ public class homeFragment extends Fragment implements NavigationView.OnNavigatio
         actionBarDrawerToggle.getDrawerArrowDrawable().setColor(getResources().getColor(R.color.black));
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
+
+        carouselView = (CarouselView) view.findViewById(R.id.carouselView);
+        carouselView.setPageCount(sampleImages.length);
+
+        carouselView.setImageListener(imageListener);
 
         navigationView = (NavigationView) view.findViewById(R.id.navigationView);
         navigationView.setItemIconTintList(null);
@@ -170,6 +181,13 @@ public class homeFragment extends Fragment implements NavigationView.OnNavigatio
         return view;
 
     }
+
+    ImageListener imageListener = new ImageListener() {
+        @Override
+        public void setImageForPosition(int position, ImageView imageView) {
+            imageView.setImageResource(sampleImages[position]);
+        }
+    };
 
     @Override
     public void onStart() {

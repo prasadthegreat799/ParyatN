@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.14548611111111112" />
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/drawable/background_black_stroke.xml" value="0.141796875" />
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/drawable/background_bookbtn.xml" value="0.189453125" />
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/drawable/background_bookbtn_white.xml" value="0.191015625" />
@@ -15,6 +16,7 @@
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/drawable/ic_baseline_location_on_24.xml" value="0.189453125" />
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/drawable/ic_baseline_star_half_15.xml" value="0.189453125" />
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/drawable/profile_stats_bg.xml" value="0.189453125" />
+        <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/drawable/search_outline.xml" value="0.18020833333333333" />
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/drawable/side_menu_colors.xml" value="0.191015625" />
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/drawable/sphere_bg_pink.xml" value="0.191015625" />
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/drawable/sphere_bg_white.xml" value="0.191015625" />
@@ -26,8 +28,9 @@
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/layout/fragment_explore.xml" value="0.190625" />
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/layout/fragment_explore_company.xml" value="0.1734375" />
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/layout/fragment_filter.xml" value="0.17683397683397684" />
-        <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/layout/fragment_home.xml" value="0.190625" />
+        <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/layout/fragment_home.xml" value="0.1443850267379679" />
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/layout/fragment_profile.xml" value="0.190625" />
+        <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/layout/fragment_tours.xml" value="0.1676975945017182" />
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/layout/nav_header.xml" value="0.17890625" />
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/layout/popular_categories_layout.xml" value="0.17890625" />
         <entry key="..\:/Users/Aravind Jagarlamudi/AndroidStudioProjects/ParyatN/app/src/main/res/layout/single_company_layout.xml" value="0.20625" />
@@ -50,7 +53,6 @@
         <entry key="..\:/Users/Neela Prasad/AndroidStudioProjects/paryatan/app/src/main/res/drawable/bookmark_icon.xml" value="0.19166666666666668" />
         <entry key="..\:/Users/Neela Prasad/AndroidStudioProjects/paryatan/app/src/main/res/drawable/bottomnav_colors.xml" value="0.19166666666666668" />
         <entry key="..\:/Users/Neela Prasad/AndroidStudioProjects/paryatan/app/src/main/res/drawable/final_search_icon.xml" value="0.19166666666666668" />
-        <entry key="..\:/Users/Neela Prasad/AndroidStudioProjects/paryatan/app/src/main/res/drawable/home_icon.xml" value="0.19166666666666668" />
         <entry key="..\:/Users/Neela Prasad/AndroidStudioProjects/paryatan/app/src/main/res/drawable/ic_baseline_access_time_filled_24.xml" value="0.19166666666666668" />
         <entry key="..\:/Users/Neela Prasad/AndroidStudioProjects/paryatan/app/src/main/res/drawable/ic_baseline_account_balance_24.xml" value="0.19166666666666668" />
         <entry key="..\:/Users/Neela Prasad/AndroidStudioProjects/paryatan/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.19166666666666668" />

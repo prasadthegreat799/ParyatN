@@ -40,8 +40,8 @@
             android:layout_marginBottom="20dp"
             android:backgroundTint="#fff"
             android:drawableLeft="@drawable/ic_google"
-            android:paddingStart="40dp"
-            android:paddingEnd="40dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="10dp"
             android:text="Continue with Google"
             android:textColor="@color/black"
             android:textSize="14sp" />
