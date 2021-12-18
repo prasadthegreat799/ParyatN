@@ -67,17 +67,17 @@ public class MainActivity extends AppCompatActivity {
                             break;
                         case R.id.exploreMenu:
                             fragment = new exploreFragment();
-                            v2.setBackgroundColor(getResources().getColor(R.color.purple_500));
+                            v3.setBackgroundColor(getResources().getColor(R.color.purple_500));
                             v1.setBackgroundColor(getResources().getColor(R.color.white));
-                            v3.setBackgroundColor(getResources().getColor(R.color.white));
+                            v2.setBackgroundColor(getResources().getColor(R.color.white));
                             v4.setBackgroundColor(getResources().getColor(R.color.white));
                             relativeLayout_main.setBackgroundColor(getResources().getColor(R.color.purple_200));
                             break;
                         case R.id.toursMenu:
                             fragment = new toursFragment();
-                            v3.setBackgroundColor(getResources().getColor(R.color.purple_500));
+                            v2.setBackgroundColor(getResources().getColor(R.color.purple_500));
                             v1.setBackgroundColor(getResources().getColor(R.color.white));
-                            v2.setBackgroundColor(getResources().getColor(R.color.white));
+                            v3.setBackgroundColor(getResources().getColor(R.color.white));
                             v4.setBackgroundColor(getResources().getColor(R.color.white));
                             relativeLayout_main.setBackgroundColor(getResources().getColor(R.color.browser_actions_bg_grey));
                             break;

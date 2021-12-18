@@ -21,13 +21,11 @@
             android:id="@+id/action_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="3dp"
             android:background="@color/white"
             android:backgroundTint="@color/white"
             app:elevation="0dp"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -56,8 +54,7 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginEnd="10dp"
-                    android:backgroundTint="@color/pale_pink"
-                    android:background="@color/pale_pink"
+                    android:src="@drawable/microsoft"
                     app:civ_border_color="@color/white"
                     app:civ_border_width="2dp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -81,41 +78,63 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:layout_marginLeft="10dp"
-                    android:text="Discover"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/muli"
+                    android:text="Explore with us"
                     android:textColor="@color/black"
-                    android:textSize="16sp"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:layout_marginLeft="10dp"
-                    android:text="Explore the best industries in the world!"
-                    android:textSize="16sp" />
+                    android:layout_marginStart="15dp"
+                    android:fontFamily="@font/muli"
+                    android:text="To the top industries in the world!"
+                    android:textSize="14sp" />
 
-
-                <EditText
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="5dp"
-                    android:background="@drawable/background_search"
-                    android:drawableRight="@drawable/search_icon"
-                    android:drawableTint="@color/black"
-                    android:hint="Search Your Trip"
-                    android:padding="10dp"
-                    android:paddingLeft="10dp"
-                    android:textSize="16sp" />
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/background_search">
 
+                    <EditText
+                        android:id="@+id/searchTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/searchIcon"
+                        android:background="@drawable/background_search"
+                        android:hint="Search Your Trip"
+                        android:layout_marginEnd="10dp"
+                        android:inputType="textPersonName"
+                        android:paddingStart="20dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="20dp"
+                        android:paddingBottom="10dp"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/searchIcon"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_margin="5dp"
+                        android:padding="5dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/sphere_bg_pink"
+                        android:src="@drawable/search_icon" />
+
+                </RelativeLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="30dp"
                     android:layout_marginBottom="10dp"
                     android:orientation="vertical">
 
@@ -134,7 +153,9 @@
                         android:id="@+id/filterLayout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="5dp"
                         android:paddingTop="5dp"
                         android:paddingBottom="5dp" />
 
@@ -142,7 +163,7 @@
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
+                        android:layout_margin="15dp"
                         android:background="@color/pale_pink"
                         android:backgroundTint="@color/pale_pink"
                         android:orientation="vertical"
@@ -178,29 +199,14 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                    <TextView
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginEnd="20dp"
-                        android:orientation="horizontal"
-                        android:weightSum="10">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginStart="5dp"
-                            android:layout_marginEnd="5dp"
-                            android:layout_weight="5"
-                            android:gravity="left"
-                            android:text="Popular Brands"
-                            android:textSize="22dp"
-                            android:textStyle="italic|bold" />
-
-                    </LinearLayout>
+                        android:layout_marginStart="15dp"
+                        android:text="Popular Brands"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
 
                     <!--<LinearLayout
                         android:layout_width="match_parent"
