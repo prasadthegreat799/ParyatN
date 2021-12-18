@@ -120,13 +120,16 @@
 
                     <ImageView
                         android:id="@+id/searchIcon"
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
-                        android:layout_margin="5dp"
-                        android:padding="5dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="5dp"
                         android:background="@drawable/sphere_bg_pink"
+                        android:padding="5dp"
                         android:src="@drawable/search_icon" />
 
                 </RelativeLayout>
@@ -280,23 +283,24 @@
                         <RelativeLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:paddingStart="5dp"
+                            android:paddingStart="10dp"
                             android:paddingEnd="10dp"
                             android:paddingTop="5dp"
                             android:paddingBottom="5dp"
-                            android:layout_marginEnd="2dp"
-                            android:background="@drawable/background_search"
+                            android:layout_marginEnd="3dp"
+                            android:background="@drawable/background_branches"
                             android:layout_weight="1">
 
                             <com.mikhaellopez.circularimageview.CircularImageView
                                 android:id="@+id/branchImage"
                                 android:layout_width="40dp"
                                 android:layout_height="40dp"
-                                android:scaleType="centerCrop"
-                                android:adjustViewBounds="true"
                                 android:layout_alignParentStart="true"
                                 android:layout_centerVertical="true"
-                                android:src="@drawable/microsoft" />
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/microsoft"
+                                app:civ_border_width="3dp" />
 
                             <TextView
                                 android:id="@+id/branchName"
@@ -305,7 +309,8 @@
                                 android:layout_centerVertical="true"
                                 android:layout_marginStart="10dp"
                                 android:layout_toEndOf="@id/branchImage"
-                                android:text="CSE"
+                                android:text="Computer Science"
+                                android:singleLine="true"
                                 android:textSize="14sp"
                                 android:textStyle="bold"/>
 
@@ -314,12 +319,12 @@
                         <RelativeLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:paddingStart="5dp"
+                            android:paddingStart="10dp"
                             android:paddingEnd="10dp"
                             android:paddingTop="5dp"
                             android:paddingBottom="5dp"
-                            android:layout_marginStart="2dp"
-                            android:background="@drawable/background_search"
+                            android:layout_marginStart="3dp"
+                            android:background="@drawable/background_branches"
                             android:layout_weight="1">
 
                             <com.mikhaellopez.circularimageview.CircularImageView
@@ -330,7 +335,8 @@
                                 android:adjustViewBounds="true"
                                 android:layout_alignParentStart="true"
                                 android:layout_centerVertical="true"
-                                android:src="@drawable/microsoft" />
+                                android:src="@drawable/microsoft"
+                                app:civ_border_width="3dp"/>
 
                             <TextView
                                 android:id="@+id/branchName2"
@@ -339,7 +345,138 @@
                                 android:layout_centerVertical="true"
                                 android:layout_marginStart="10dp"
                                 android:layout_toEndOf="@id/branchImage2"
-                                android:text="ECE"
+                                android:singleLine="true"
+                                android:text="Electrical"
+                                android:textSize="14sp"
+                                android:textStyle="bold"/>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="5dp"
+                        android:weightSum="2">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:layout_marginEnd="3dp"
+                            android:background="@drawable/background_branches"
+                            android:layout_weight="1">
+
+                            <com.mikhaellopez.circularimageview.CircularImageView
+                                android:id="@+id/branchImage3"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:scaleType="centerCrop"
+                                android:adjustViewBounds="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/microsoft"
+                                app:civ_border_width="3dp"/>
+
+                            <TextView
+                                android:id="@+id/branchName3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="10dp"
+                                android:layout_toEndOf="@id/branchImage3"
+                                android:text="Mechanical"
+                                android:singleLine="true"
+                                android:textSize="14sp"
+                                android:textStyle="bold"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:layout_marginStart="3dp"
+                            android:background="@drawable/background_branches"
+                            android:layout_weight="1">
+
+                            <com.mikhaellopez.circularimageview.CircularImageView
+                                android:id="@+id/branchImage4"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:scaleType="centerCrop"
+                                android:adjustViewBounds="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/microsoft"
+                                app:civ_border_width="3dp"/>
+
+                            <TextView
+                                android:id="@+id/branchName4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="10dp"
+                                android:layout_toEndOf="@id/branchImage4"
+                                android:text="Civil"
+                                android:singleLine="true"
+                                android:textSize="14sp"
+                                android:textStyle="bold"/>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="5dp"
+                        android:weightSum="2">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:layout_marginEnd="3dp"
+                            android:background="@drawable/background_branches"
+                            android:layout_weight="1">
+
+                            <com.mikhaellopez.circularimageview.CircularImageView
+                                android:id="@+id/branchImage5"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:scaleType="centerCrop"
+                                android:adjustViewBounds="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/microsoft"
+                                app:civ_border_width="3dp"/>
+
+                            <TextView
+                                android:id="@+id/branchName5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="10dp"
+                                android:layout_toEndOf="@id/branchImage5"
+                                android:text="Chemical Engineering"
+                                android:singleLine="true"
                                 android:textSize="14sp"
                                 android:textStyle="bold"/>
 
@@ -350,6 +487,7 @@
                 </LinearLayout>
 
                 <androidx.cardview.widget.CardView
+                    android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="30dp"
