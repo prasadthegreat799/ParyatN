@@ -24,7 +24,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="3dp"
             android:background="@color/white"
             android:backgroundTint="@color/white"
             app:elevation="0dp"
@@ -48,15 +48,6 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 
-                    <TextView
-                        android:id="@+id/toolbar_title"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="Paryatn"
-                        android:textSize="24dp"
-                        android:textStyle="bold" />
-
                 </androidx.appcompat.widget.Toolbar>
 
 
@@ -65,7 +56,8 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginEnd="10dp"
-                    android:src="@drawable/profile_icon"
+                    android:backgroundTint="@color/pale_pink"
+                    android:background="@color/pale_pink"
                     app:civ_border_color="@color/white"
                     app:civ_border_width="2dp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -86,6 +78,24 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="Discover"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="Explore the best industries in the world!"
+                    android:textSize="16sp" />
+
 
                 <EditText
                     android:layout_width="match_parent"
@@ -93,25 +103,13 @@
                     android:layout_marginStart="5dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginEnd="5dp"
-                    android:background="@drawable/search_outline"
+                    android:background="@drawable/background_search"
                     android:drawableRight="@drawable/search_icon"
                     android:drawableTint="@color/black"
                     android:hint="Search Your Trip"
                     android:padding="10dp"
                     android:paddingLeft="10dp"
                     android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="5dp"
-                    android:padding="10dp"
-                    android:text="Nearby Companies List"
-                    android:textColor="@color/black"
-                    android:textSize="20dp"
-                    android:textStyle="bold" />
 
 
                 <LinearLayout
@@ -145,8 +143,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
-                        android:background="@color/black"
-                        android:backgroundTint="@color/black"
+                        android:background="@color/pale_pink"
+                        android:backgroundTint="@color/pale_pink"
                         android:orientation="vertical"
                         android:padding="5dp"
                         app:cardCornerRadius="9dp">
@@ -187,16 +185,8 @@
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginEnd="20dp"
-                        android:gravity="center"
                         android:orientation="horizontal"
                         android:weightSum="10">
-
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="2dp"
-                            android:layout_gravity="center"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/sphere_bg_pink" />
 
                         <TextView
                             android:layout_width="0dp"
@@ -205,18 +195,10 @@
                             android:layout_marginStart="5dp"
                             android:layout_marginEnd="5dp"
                             android:layout_weight="5"
-                            android:gravity="center"
+                            android:gravity="left"
                             android:text="Popular Brands"
-                            android:textColor="@color/purple_500"
                             android:textSize="22dp"
                             android:textStyle="italic|bold" />
-
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="2dp"
-                            android:layout_gravity="center"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/sphere_bg_pink" />
 
                     </LinearLayout>
 
