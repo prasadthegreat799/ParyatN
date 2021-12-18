@@ -12,8 +12,10 @@
         android:id="@+id/StudentFragmentContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/bottom_nav_layout" />
+        android:layout_above="@id/BottomNavigationView" />
 
+
+    <!---
     <androidx.cardview.widget.CardView
         android:id="@+id/bottom_nav_layout"
         android:layout_width="match_parent"
@@ -69,6 +71,8 @@
 
             </LinearLayout>
 
+            -->
+
             <com.google.android.material.bottomnavigation.BottomNavigationView
                 android:id="@+id/BottomNavigationView"
                 android:layout_width="match_parent"
@@ -80,7 +84,8 @@
                 app:itemTextColor="@drawable/bottomnav_colors"
                 app:menu="@menu/bottom_menu" />
 
+    <!---
         </LinearLayout>
-    </androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView> -->
 
 </RelativeLayout>
