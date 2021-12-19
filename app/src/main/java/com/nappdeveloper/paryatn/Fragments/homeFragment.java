@@ -1,16 +1,15 @@
 package com.nappdeveloper.paryatn.Fragments;
 
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.cardview.widget.CardView;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
@@ -24,7 +23,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
@@ -45,7 +47,6 @@ import com.mikhaellopez.circularimageview.CircularImageView;
 import com.nappdeveloper.paryatn.Activities.splashActivity;
 import com.nappdeveloper.paryatn.Adapters.FilterAdapter;
 import com.nappdeveloper.paryatn.Adapters.PopularCategoriesAdapter;
-import com.nappdeveloper.paryatn.MainActivity;
 import com.nappdeveloper.paryatn.Model.Model;
 import com.nappdeveloper.paryatn.R;
 import com.synnapps.carouselview.CarouselView;
@@ -71,6 +72,10 @@ public class homeFragment extends Fragment implements NavigationView.OnNavigatio
 
     int[] sampleImages = {R.drawable.microsoft, R.drawable.microsoft, R.drawable.microsoft};
     CircularImageView profileImg;
+    ConstraintLayout sexyLogoLayout;
+    LinearLayout userGreet;
+
+    CardView profileImageCard;
 
 
     @Override
@@ -85,6 +90,10 @@ public class homeFragment extends Fragment implements NavigationView.OnNavigatio
         AppCompatActivity activity = (AppCompatActivity) getActivity();
         activity.setSupportActionBar(toolbar);
         activity.getSupportActionBar().setDisplayShowTitleEnabled(false);
+
+        sexyLogoLayout = (ConstraintLayout) view.findViewById(R.id.sexyLogoLayout);
+        profileImageCard = (CardView) view.findViewById(R.id.profilePicCardView);
+        userGreet = (LinearLayout) view.findViewById(R.id.userGreet);
 
         profileImg = (CircularImageView) view.findViewById(R.id.HomeProfileImg);
         drawerLayout = (DrawerLayout) view.findViewById(R.id.my_drawer_layout);
@@ -176,6 +185,24 @@ public class homeFragment extends Fragment implements NavigationView.OnNavigatio
 
                     }
                 });
+
+        // load the animation
+        Animation animFadein = AnimationUtils.loadAnimation(getContext().getApplicationContext(),R.anim.pushin_right);
+
+        // start the animation
+        sexyLogoLayout.startAnimation(animFadein);
+
+        // load the animation
+        Animation animRotate = AnimationUtils.loadAnimation(getContext().getApplicationContext(),R.anim.rotation_pushin);
+
+        // start the animation
+        profileImageCard.startAnimation(animRotate);
+
+        // load the animation
+        Animation animFadeIn = AnimationUtils.loadAnimation(getContext().getApplicationContext(),R.anim.fadein);
+
+        // start the animation
+        userGreet.startAnimation(animFadeIn);
 
 
         return view;
