@@ -34,11 +34,11 @@ public class ExploreAdapter extends FirebaseRecyclerAdapter<Model, ExploreAdapte
         holder.companyRating.setText(model.getCompanyRating());
         holder.companyLocation.setText(model.getCompanyLocation());
 
-        if (model.getCompanyOverview() != null && model.getCompanyOverview().length() >= 80) {
+        /*if (model.getCompanyOverview() != null && model.getCompanyOverview().length() >= 80) {
             String cDesc = model.getCompanyOverview().toString();
             String cDescFinal = cDesc.substring(0, 79);
             holder.companyDescTxt.setText(cDescFinal+" ....");
-        }
+        }*/
     }
 
     @Override
@@ -71,7 +71,7 @@ public class ExploreAdapter extends FirebaseRecyclerAdapter<Model, ExploreAdapte
             companyType = (TextView) itemView.findViewById(R.id.CompanyTypeTxt);
             companyRating = (TextView) itemView.findViewById(R.id.CompanyRatingTxt);
             companyLocation = (TextView) itemView.findViewById(R.id.CompanyLocationTxt);
-            companyDescTxt = (TextView) itemView.findViewById(R.id.CompanyDescTxt);
+            //companyDescTxt = (TextView) itemView.findViewById(R.id.CompanyDescTxt);
 
         }
     }

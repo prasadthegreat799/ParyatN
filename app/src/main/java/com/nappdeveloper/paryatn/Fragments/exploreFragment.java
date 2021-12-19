@@ -12,6 +12,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.EditText;
+import android.widget.ImageView;
 
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
@@ -27,6 +31,8 @@ public class exploreFragment extends Fragment {
     RecyclerView recyclerView;
     ExploreFilterAdapter adapter;
     DatabaseReference databaseReference;
+    ImageView searchIcon;
+    EditText searchTxt;
 
 
     @Override
@@ -34,6 +40,9 @@ public class exploreFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view=inflater.inflate(R.layout.fragment_explore, container, false);
+
+        searchIcon = (ImageView) view.findViewById(R.id.searchIconExplore);
+        searchTxt = (EditText) view.findViewById(R.id.searchTxtExplore);
 
         databaseReference =FirebaseDatabase.getInstance().getReference().child("filterNamesList");
         recyclerView = (RecyclerView) view.findViewById(R.id.exploreFilterRecyclerView);
@@ -59,6 +68,19 @@ public class exploreFragment extends Fragment {
 
         adapter = new ExploreFilterAdapter(options);
         recyclerView.setAdapter(adapter);
+
+        // load the animation
+        Animation animPushIn = AnimationUtils.loadAnimation(getContext().getApplicationContext(),R.anim.pushin_leftin);
+
+        // start the animation
+        searchIcon.startAnimation(animPushIn);
+
+        // load the animation
+        Animation animFadeIn = AnimationUtils.loadAnimation(getContext().getApplicationContext(),R.anim.fadein);
+
+        // start the animation
+        searchTxt.startAnimation(animFadeIn);
+
         return view;
     }
 

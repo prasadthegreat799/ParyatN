@@ -40,13 +40,13 @@ public class ExploreFilterAdapter extends FirebaseRecyclerAdapter<Model, Explore
         holder.filterNameTxt.setText(name);
 
         if(selected_position == position){
-            holder.filterNameTxt.setTextColor(Color.parseColor("Black"));
-            TextViewCompat.setTextAppearance(holder.filterNameTxt, R.style.HUGEText);
-            holder.linearLayout.setBackgroundResource(R.drawable.background_bookbtn_white);
-        }else{
             holder.filterNameTxt.setTextColor(Color.parseColor("White"));
+            TextViewCompat.setTextAppearance(holder.filterNameTxt, R.style.HUGEText);
+            holder.linearLayout.setBackgroundResource(R.drawable.background_bookbtn);
+        }else{
+            holder.filterNameTxt.setTextColor(Color.parseColor("Black"));
             TextViewCompat.setTextAppearance(holder.filterNameTxt, R.style.smallText);
-            holder.linearLayout.setBackgroundResource(R.drawable.background_btn_whitestroke);
+            holder.linearLayout.setBackgroundResource(R.drawable.background_search);
         }
 
         holder.filterNameTxt.setOnClickListener(new View.OnClickListener() {

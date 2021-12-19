@@ -25,6 +25,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
@@ -74,6 +75,8 @@ public class homeFragment extends Fragment implements NavigationView.OnNavigatio
     CircularImageView profileImg;
     ConstraintLayout sexyLogoLayout;
     LinearLayout userGreet;
+    ImageView searchIcon;
+    EditText searchTxt;
 
     CardView profileImageCard;
 
@@ -94,6 +97,8 @@ public class homeFragment extends Fragment implements NavigationView.OnNavigatio
         sexyLogoLayout = (ConstraintLayout) view.findViewById(R.id.sexyLogoLayout);
         profileImageCard = (CardView) view.findViewById(R.id.profilePicCardView);
         userGreet = (LinearLayout) view.findViewById(R.id.userGreet);
+        searchIcon = (ImageView) view.findViewById(R.id.searchIcon);
+        searchTxt = (EditText) view.findViewById(R.id.searchTxt);
 
         profileImg = (CircularImageView) view.findViewById(R.id.HomeProfileImg);
         drawerLayout = (DrawerLayout) view.findViewById(R.id.my_drawer_layout);
@@ -187,10 +192,10 @@ public class homeFragment extends Fragment implements NavigationView.OnNavigatio
                 });
 
         // load the animation
-        Animation animFadein = AnimationUtils.loadAnimation(getContext().getApplicationContext(),R.anim.pushin_right);
+        Animation animPushIn = AnimationUtils.loadAnimation(getContext().getApplicationContext(),R.anim.pushin_right);
 
         // start the animation
-        sexyLogoLayout.startAnimation(animFadein);
+        sexyLogoLayout.startAnimation(animPushIn);
 
         // load the animation
         Animation animRotate = AnimationUtils.loadAnimation(getContext().getApplicationContext(),R.anim.rotation_pushin);
@@ -202,7 +207,19 @@ public class homeFragment extends Fragment implements NavigationView.OnNavigatio
         Animation animFadeIn = AnimationUtils.loadAnimation(getContext().getApplicationContext(),R.anim.fadein);
 
         // start the animation
-        userGreet.startAnimation(animFadeIn);
+        userGreet.startAnimation(animPushIn);
+
+        // load the animation
+        Animation animPushLeftIn = AnimationUtils.loadAnimation(getContext().getApplicationContext(),R.anim.pushin_leftin);
+
+        // start the animation
+        searchIcon.startAnimation(animPushLeftIn);
+
+        // load the animation
+        Animation animFadeIn2 = AnimationUtils.loadAnimation(getContext().getApplicationContext(),R.anim.fadein);
+
+        // start the animation
+        searchTxt.startAnimation(animFadeIn2);
 
 
         return view;
