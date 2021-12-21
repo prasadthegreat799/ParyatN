@@ -18,7 +18,7 @@ import com.nappdeveloper.paryatn.Model.Model;
 import com.nappdeveloper.paryatn.R;
 
 
-public class toursFragment extends Fragment {
+public class projectsFragment extends Fragment {
 
     RecyclerView recyclerView;
     ExploreAdapter adapter;
@@ -30,7 +30,7 @@ public class toursFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_tours, container, false);
+        View view = inflater.inflate(R.layout.fragment_projects, container, false);
 
         databaseReference = FirebaseDatabase.getInstance().getReference().child("companyList");
         recyclerView = (RecyclerView) view.findViewById(R.id.ToursRecyclerView);

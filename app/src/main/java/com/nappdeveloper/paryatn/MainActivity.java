@@ -1,12 +1,9 @@
 package com.nappdeveloper.paryatn;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -20,7 +17,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.nappdeveloper.paryatn.Fragments.exploreFragment;
 import com.nappdeveloper.paryatn.Fragments.homeFragment;
 import com.nappdeveloper.paryatn.Fragments.profileFragment;
-import com.nappdeveloper.paryatn.Fragments.toursFragment;
+import com.nappdeveloper.paryatn.Fragments.projectsFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -74,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
                             relativeLayout_main.setBackgroundColor(getResources().getColor(R.color.purple_200)); */
                             break;
                         case R.id.toursMenu:
-                            fragment = new toursFragment();
+                            fragment = new projectsFragment();
 
                            /* v2.setBackgroundColor(getResources().getColor(R.color.purple_500));
                             v1.setBackgroundColor(getResources().getColor(R.color.white));

@@ -13,6 +13,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -37,7 +39,7 @@ import com.nappdeveloper.paryatn.R;
 public class profileFragment extends Fragment {
 
     CircularImageView profileImg;
-    TextView userName, userMail, userCollege, userLocation, userBranch, signOutBtn, shareBtn, editBtn;
+    TextView userName, userMail, userCollege, userLocation, userBranch, signOutBtn, shareBtn, editBtn, tripsHistoryBtn, favToursBtn, settingsBtn, helpBtn;
     Toolbar toolbar;
 
     @Override
@@ -53,6 +55,10 @@ public class profileFragment extends Fragment {
         userCollege = (TextView) view.findViewById(R.id.UserCollegeTxt);
         userLocation = (TextView) view.findViewById(R.id.UserLocationTxt);
         editBtn = (TextView) view.findViewById(R.id.editBtn);
+        tripsHistoryBtn = (TextView) view.findViewById(R.id.tripsHistory);
+        favToursBtn = (TextView) view.findViewById(R.id.favTours);
+        settingsBtn = (TextView) view.findViewById(R.id.settings);
+        helpBtn = (TextView) view.findViewById(R.id.helpSupport);
 
         //toolbar = (Toolbar) view.findViewById(R.id.toolbar);
 
@@ -160,6 +166,21 @@ public class profileFragment extends Fragment {
                     }
                 });
 
+        /*// load the animation
+        Animation animleftin = AnimationUtils.loadAnimation(getContext().getApplicationContext(),R.anim.pushin_left_profile_anim);
+
+        // start the animation
+        tripsHistoryBtn.startAnimation(animleftin);
+        settingsBtn.startAnimation(animleftin);
+        shareBtn.startAnimation(animleftin);
+
+        // load the animation
+        Animation animrightin = AnimationUtils.loadAnimation(getContext().getApplicationContext(),R.anim.pushin_right_profile_anim);
+
+        // start the animation
+        favToursBtn.startAnimation(animrightin);
+        helpBtn.startAnimation(animrightin);
+        signOutBtn.startAnimation(animrightin);*/
 
         return view;
     }
