@@ -8,35 +8,7 @@
     android:background="@color/white"
     tools:context=".Fragments.profileFragment">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp">
 
-        <TextView
-            android:id="@+id/profile_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:text="My Account"
-            android:textColor="@color/purple_700"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/editBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:text="Edit Profile"
-            android:textColor="@color/purple_700"
-            android:textSize="13sp" />
-
-    </RelativeLayout>
 
     <ScrollView
         android:id="@+id/scrollView2"
@@ -48,348 +20,399 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
-            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:orientation="vertical">
 
-            <androidx.cardview.widget.CardView
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                app:cardElevation="5dp"
-                app:cardCornerRadius="10dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginEnd="15dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                android:background="@color/purple_500"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/profile_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="My Account"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/editBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:text="Edit Profile"
+                    android:textColor="@color/white"
+                    android:textSize="13sp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:padding="10dp"
+                    android:background="@drawable/background_curved_inverted"
+                    android:paddingBottom="30dp"
                     android:orientation="vertical">
 
-                    <LinearLayout
+                    <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:weightSum="10">
-
-                        <com.mikhaellopez.circularimageview.CircularImageView
-                            android:id="@+id/ProfileImg"
-                            android:layout_width="90dp"
-                            android:layout_height="90dp"
-                            android:layout_gravity="center"
-                            android:src="@drawable/profile_icon" />
+                        android:layout_gravity="center"
+                        app:cardElevation="5dp"
+                        app:cardCornerRadius="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:backgroundTint="@color/white"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
 
                         <LinearLayout
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
                             android:layout_gravity="center"
+                            android:padding="10dp"
                             android:orientation="vertical">
 
-                            <TextView
-                                android:id="@+id/UserNameTxt"
-                                android:layout_width="wrap_content"
+                            <LinearLayout
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginBottom="5dp"
-                                android:text="User Name"
-                                android:textStyle="bold"
-                                android:textColor="@color/black"
-                                android:textSize="18sp"
-                                android:singleLine="true"/>
+                                android:orientation="horizontal"
+                                android:weightSum="10">
 
-                            <TextView
-                                android:id="@+id/UserBranchTxt"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Branch Here"
-                                android:textSize="14sp"/>
+                                <com.mikhaellopez.circularimageview.CircularImageView
+                                    android:id="@+id/ProfileImg"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/microsoft" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/UserNameTxt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="5dp"
+                                        android:text="User Name"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/black"
+                                        android:textSize="18sp"
+                                        android:singleLine="true"/>
+
+                                    <TextView
+                                        android:id="@+id/UserBranchTxt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Branch Here"
+                                        android:textSize="14sp"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
 
                         </LinearLayout>
 
-                    </LinearLayout>
+                    </androidx.cardview.widget.CardView>
 
                 </LinearLayout>
 
-            </androidx.cardview.widget.CardView>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginEnd="15dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/UserMailTxt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:text="Mail Here"
-                    android:gravity="center"
-                    android:textSize="13sp"
-                    android:drawableStart="@drawable/ic_baseline_email_24"
-                    android:drawableTint="@color/ash"
-                    android:drawablePadding="10dp"/>
-
-                <TextView
-                    android:id="@+id/UserCollegeTxt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:text="User College"
-                    android:gravity="center"
-                    android:textSize="13sp"
-                    android:drawableStart="@drawable/ic_baseline_account_balance_24"
-                    android:drawableTint="@color/ash"
-                    android:drawablePadding="10dp"/>
-
-                <TextView
-                    android:id="@+id/UserLocationTxt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:text="User Location"
-                    android:gravity="center"
-                    android:textSize="13sp"
-                    android:drawableStart="@drawable/ic_baseline_location_on_24"
-                    android:drawableTint="@color/ash"
-                    android:drawablePadding="10dp"/>
-
-                <TextView
-                    android:id="@+id/UserPhoneTxt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:text="Phone Number"
-                    android:gravity="center"
-                    android:textSize="13sp"
-                    android:drawableStart="@drawable/ic_baseline_phone_24"
-                    android:drawableTint="@color/ash"
-                    android:drawablePadding="10dp"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="5dp"
-                android:weightSum="10">
-
-                <androidx.cardview.widget.CardView
-                    android:layout_weight="5"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    app:cardElevation="5dp"
-                    app:cardCornerRadius="10dp">
-
                 <LinearLayout
-
                     android:layout_width="match_parent"
-                    android:padding="10dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/UserMailTxt"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="26"
-                        android:textSize="25sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/purple_500"
-                        android:layout_gravity="center"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
                         android:layout_marginTop="5dp"
-                        android:text="Trips"
-                        android:textSize="14sp"
-                        android:layout_gravity="center"/>
-
-                </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_weight="5"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    app:cardElevation="5dp"
-                    app:cardCornerRadius="10dp">
-
-                <LinearLayout
-
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="4.5"
-                        android:textSize="25sp"
-                        android:textStyle="bold"
+                        android:layout_marginBottom="5dp"
+                        android:text="Mail Here"
+                        android:gravity="center"
                         android:textColor="@color/black"
-                        android:drawableStart="@drawable/ic_baseline_star_half_24"
-                        android:drawableTint="@color/rating_yellow"
-                        android:drawablePadding="5dp"
-                        android:layout_gravity="center"/>
+                        android:textSize="13sp"
+                        android:drawableStart="@drawable/ic_baseline_email_24"
+                        android:drawableTint="@color/black"
+                        android:drawablePadding="10dp"/>
 
                     <TextView
+                        android:id="@+id/UserCollegeTxt"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
                         android:layout_marginTop="5dp"
-                        android:text="Rating"
-                        android:textSize="14sp"
-                        android:layout_gravity="center"/>
+                        android:layout_marginBottom="5dp"
+                        android:text="User College"
+                        android:gravity="center"
+                        android:textSize="13sp"
+                        android:textColor="@color/black"
+                        android:drawableStart="@drawable/ic_baseline_account_balance_24"
+                        android:drawableTint="@color/black"
+                        android:drawablePadding="10dp"/>
+
+                    <TextView
+                        android:id="@+id/UserLocationTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="User Location"
+                        android:gravity="center"
+                        android:textSize="13sp"
+                        android:textColor="@color/black"
+                        android:drawableStart="@drawable/ic_baseline_location_on_24"
+                        android:drawableTint="@color/black"
+                        android:drawablePadding="10dp"/>
+
+                    <TextView
+                        android:id="@+id/UserPhoneTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="Phone Number"
+                        android:gravity="center"
+                        android:textSize="13sp"
+                        android:textColor="@color/black"
+                        android:drawableStart="@drawable/ic_baseline_phone_24"
+                        android:drawableTint="@color/black"
+                        android:drawablePadding="10dp"/>
 
                 </LinearLayout>
 
-                </androidx.cardview.widget.CardView>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="10dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/tripsHistory"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="12dp"
+                    android:orientation="horizontal"
                     android:layout_marginTop="10dp"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginEnd="15dp"
-                    android:text="Trips History"
-                    android:layout_gravity="center"
-                    android:gravity="center_vertical"
-                    android:textSize="15sp"
-                    android:textColor="@color/black"
-                    android:background="@color/browser_actions_bg_grey"
-                    android:drawableStart="@drawable/ic_baseline_directions_bus_24"
-                    android:drawableTint="@color/rating_yellow"
-                    android:drawablePadding="10dp"/>
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:weightSum="10">
 
-                <TextView
-                    android:id="@+id/favTours"
+                    <androidx.cardview.widget.CardView
+                        android:layout_weight="5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        app:cardElevation="5dp"
+                        app:cardCornerRadius="10dp">
+
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:padding="10dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="26"
+                                android:textSize="25sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/purple_500"
+                                android:layout_gravity="center"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="Trips"
+                                android:textSize="14sp"
+                                android:layout_gravity="center"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_weight="5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        app:cardElevation="5dp"
+                        app:cardCornerRadius="10dp">
+
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="4.5"
+                                android:textSize="25sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:drawableStart="@drawable/ic_baseline_star_half_24"
+                                android:drawableTint="@color/rating_yellow"
+                                android:drawablePadding="5dp"
+                                android:layout_gravity="center"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="Rating"
+                                android:textSize="14sp"
+                                android:layout_gravity="center"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:layout_marginEnd="15dp"
-                    android:layout_marginStart="15dp"
-                    android:text="Favourites"
-                    android:layout_gravity="center"
-                    android:gravity="center_vertical"
-                    android:padding="12dp"
-                    android:textSize="15sp"
-                    android:textColor="@color/black"
-                    android:background="@color/browser_actions_bg_grey"
-                    android:drawableStart="@drawable/ic_baseline_favorite_24"
-                    android:drawableTint="@color/purple_500"
-                    android:drawablePadding="10dp"/>
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/settings"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="15dp"
-                    android:layout_marginStart="15dp"
-                    android:text="Settings"
-                    android:layout_gravity="center"
-                    android:gravity="center_vertical"
-                    android:padding="12dp"
-                    android:textSize="15sp"
-                    android:textColor="@color/black"
-                    android:background="@color/browser_actions_bg_grey"
-                    android:drawableStart="@drawable/ic_baseline_settings_24"
-                    android:drawableTint="@color/pale_black"
-                    android:drawablePadding="10dp"/>
+                    <TextView
+                        android:id="@+id/tripsHistory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="12dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:text="Trips History"
+                        android:layout_gravity="center"
+                        android:gravity="center_vertical"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        android:background="@color/browser_actions_bg_grey"
+                        android:drawableStart="@drawable/ic_baseline_directions_bus_24"
+                        android:drawableTint="@color/rating_yellow"
+                        android:drawablePadding="10dp"/>
 
-                <TextView
-                    android:id="@+id/helpSupport"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginEnd="15dp"
-                    android:layout_marginTop="5dp"
-                    android:padding="12dp"
-                    android:layout_gravity="center"
-                    android:text="Help and Support"
-                    android:gravity="center_vertical"
-                    android:background="@color/browser_actions_bg_grey"
-                    android:textSize="15sp"
-                    android:textColor="@color/black"
-                    android:drawableStart="@drawable/ic_baseline_help_24"
-                    android:drawableTint="@color/help_blue"
-                    android:drawablePadding="10dp"/>
+                    <TextView
+                        android:id="@+id/favTours"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginStart="15dp"
+                        android:text="Favourites"
+                        android:layout_gravity="center"
+                        android:gravity="center_vertical"
+                        android:padding="12dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        android:background="@color/browser_actions_bg_grey"
+                        android:drawableStart="@drawable/ic_baseline_favorite_24"
+                        android:drawableTint="@color/pale_pink"
+                        android:drawablePadding="10dp"/>
 
-                <TextView
-                    android:id="@+id/ShareBtn"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginEnd="15dp"
-                    android:layout_marginTop="5dp"
-                    android:padding="12dp"
-                    android:layout_gravity="center"
-                    android:text="Share to Friends"
-                    android:gravity="center_vertical"
-                    android:background="@color/browser_actions_bg_grey"
-                    android:textSize="15sp"
-                    android:textColor="@color/black"
-                    android:drawableStart="@drawable/ic_baseline_share_24"
-                    android:drawableTint="#7E7C7C"
-                    android:drawablePadding="10dp"/>
+                    <TextView
+                        android:id="@+id/settings"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginStart="15dp"
+                        android:text="Settings"
+                        android:layout_gravity="center"
+                        android:gravity="center_vertical"
+                        android:padding="12dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        android:background="@color/browser_actions_bg_grey"
+                        android:drawableStart="@drawable/ic_baseline_settings_24"
+                        android:drawableTint="@color/pale_black"
+                        android:drawablePadding="10dp"/>
 
-                <TextView
-                    android:id="@+id/SignOutBtn"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginEnd="15dp"
-                    android:layout_marginTop="8dp"
-                    android:padding="12dp"
-                    android:layout_gravity="center"
-                    android:text="Logout"
-                    android:gravity="center_vertical"
-                    android:background="@color/pale_red"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/white"
-                    android:drawableStart="@drawable/ic_baseline_login_24"
-                    android:drawableTint="@color/white"
-                    android:drawablePadding="10dp"/>
+                    <TextView
+                        android:id="@+id/helpSupport"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginTop="5dp"
+                        android:padding="12dp"
+                        android:layout_gravity="center"
+                        android:text="Help and Support"
+                        android:gravity="center_vertical"
+                        android:background="@color/browser_actions_bg_grey"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        android:drawableStart="@drawable/ic_baseline_help_24"
+                        android:drawableTint="@color/help_blue"
+                        android:drawablePadding="10dp"/>
+
+                    <TextView
+                        android:id="@+id/ShareBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginTop="5dp"
+                        android:padding="12dp"
+                        android:layout_gravity="center"
+                        android:text="Share to Friends"
+                        android:gravity="center_vertical"
+                        android:background="@color/browser_actions_bg_grey"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        android:drawableStart="@drawable/ic_baseline_share_24"
+                        android:drawableTint="#7E7C7C"
+                        android:drawablePadding="10dp"/>
+
+                    <TextView
+                        android:id="@+id/SignOutBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginTop="8dp"
+                        android:padding="12dp"
+                        android:layout_gravity="center"
+                        android:text="Logout"
+                        android:gravity="center_vertical"
+                        android:background="@color/pale_red"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:drawableStart="@drawable/ic_baseline_login_24"
+                        android:drawableTint="@color/white"
+                        android:drawablePadding="10dp"/>
+
+                </LinearLayout>
 
             </LinearLayout>
 

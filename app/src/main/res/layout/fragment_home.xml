@@ -20,8 +20,6 @@
             android:id="@+id/action_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:backgroundTint="@color/white"
             app:elevation="0dp"
             android:layout_gravity="center"
             android:gravity="center_vertical"
@@ -38,7 +36,7 @@
                     android:id="@+id/toolbar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/white"
+                    android:background="@color/purple_500"
                     android:minHeight="?attr/actionBarSize"
                     android:theme="?attr/actionBarTheme"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -65,7 +63,7 @@
                         android:layout_centerVertical="true"
                         android:layout_marginStart="10dp"
                         android:text="Paryatn"
-                        android:textColor="@color/white"
+                        android:textColor="@color/purple_500"
                         android:textSize="14sp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toStartOf="parent"
@@ -79,7 +77,8 @@
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="10dp"
-                        android:src="@drawable/logo2"
+                        app:civ_border="false"
+                        android:src="@drawable/logo"
                         android:adjustViewBounds="true"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
@@ -129,69 +128,80 @@
 
                 </RelativeLayout>
 
-                <RelativeLayout
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginEnd="15dp">
+                    android:orientation="horizontal"
+                    android:background="@color/purple_500">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/profilePicCardView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:backgroundTint="@color/purple_500"
-                        app:cardCornerRadius="100dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/winners_bg"
+                        android:paddingStart="15dp"
+                        android:paddingTop="30dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="30dp">
 
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:padding="5dp">
-
-                            <com.mikhaellopez.circularimageview.CircularImageView
-                                android:id="@+id/HomeProfileImg"
-                                android:layout_width="70dp"
-                                android:layout_height="70dp"
-                                android:layout_alignParentStart="true"
-                                android:layout_centerVertical="true"
-                                android:src="@drawable/microsoft"
-                                app:civ_border_color="@color/white"
-                                app:civ_border_width="3dp" />
-
-                        </RelativeLayout>
-
-                    </androidx.cardview.widget.CardView>
-
-                    <LinearLayout
-                        android:id="@+id/userGreet"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:layout_centerVertical="true"
-                        android:layout_toEndOf="@id/profilePicCardView"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/userNameHome"
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/profilePicCardView"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/muli"
-                            android:singleLine="true"
-                            android:text="Hello TechZite,"
-                            android:textColor="@color/black"
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
+                            android:layout_centerVertical="true"
+                            android:backgroundTint="@color/purple_500"
+                            app:cardCornerRadius="100dp">
 
-                        <TextView
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp">
+
+                                <com.mikhaellopez.circularimageview.CircularImageView
+                                    android:id="@+id/HomeProfileImg"
+                                    android:layout_width="70dp"
+                                    android:layout_height="70dp"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_centerVertical="true"
+                                    android:src="@drawable/microsoft"
+                                    app:civ_border_color="@color/white"
+                                    app:civ_border_width="3dp" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <LinearLayout
+                            android:id="@+id/userGreet"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Let's xplore the top industries with us!"
-                            android:textColor="@color/black"
-                            android:textSize="12sp" />
+                            android:layout_marginStart="10dp"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@id/profilePicCardView"
+                            android:orientation="vertical">
 
-                    </LinearLayout>
+                            <TextView
+                                android:id="@+id/userNameHome"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/muli"
+                                android:singleLine="true"
+                                android:text="Hello TechZite,"
+                                android:textColor="@color/white"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
 
-                </RelativeLayout>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Let's xplore the top industries with us!"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
 
                 <androidx.cardview.widget.CardView
                     android:visibility="gone"
@@ -261,7 +271,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
                     android:layout_marginEnd="15dp"
-                    android:layout_marginTop="40dp"
+                    android:layout_marginTop="10dp"
                     android:background="@drawable/background_search">
 
                     <EditText

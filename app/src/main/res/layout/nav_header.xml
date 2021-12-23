@@ -4,7 +4,7 @@
     android:layout_height="200dp"
     android:orientation="vertical"
     android:padding="20dp"
-    android:background="@color/purple_700"
+    android:background="@color/purple_500"
     android:gravity="bottom">
 
     <com.mikhaellopez.circularimageview.CircularImageView

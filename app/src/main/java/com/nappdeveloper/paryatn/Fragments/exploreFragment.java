@@ -69,18 +69,6 @@ public class exploreFragment extends Fragment {
         adapter = new ExploreFilterAdapter(options);
         recyclerView.setAdapter(adapter);
 
-        // load the animation
-        Animation animPushIn = AnimationUtils.loadAnimation(getContext().getApplicationContext(),R.anim.pushin_leftin);
-
-        // start the animation
-        searchIcon.startAnimation(animPushIn);
-
-        // load the animation
-        Animation animFadeIn = AnimationUtils.loadAnimation(getContext().getApplicationContext(),R.anim.fadein);
-
-        // start the animation
-        searchTxt.startAnimation(animFadeIn);
-
         return view;
     }
 

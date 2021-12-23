@@ -19,7 +19,7 @@
                 <item
                     android:icon="@drawable/ic_baseline_favorite_24"
                     android:title="Favourites"
-                    app:iconTint="@color/purple_500"
+                    app:iconTint="@color/pale_pink"
                     app:showAsAction="always" />
 
                 <item

@@ -29,7 +29,7 @@
             android:layout_alignParentEnd="true"
             android:padding="3dp"
             android:background="@drawable/sphere_bg_white"
-            app:tint="@color/purple_500"/>
+            app:tint="@color/pale_pink"/>
 
     </RelativeLayout>
 
@@ -81,7 +81,7 @@
                         android:paddingEnd="10dp"
                         android:paddingBottom="2dp"
                         android:singleLine="true"
-                        android:background="@color/purple_500"
+                        android:background="@color/pale_pink"
                         android:text="Ends in 02:13:56"
                         android:textColor="@color/white"
                         android:textSize="14sp"

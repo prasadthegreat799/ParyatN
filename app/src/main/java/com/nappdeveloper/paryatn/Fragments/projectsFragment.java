@@ -1,5 +1,8 @@
 package com.nappdeveloper.paryatn.Fragments;
 
+import android.animation.Animator;
+import android.animation.ValueAnimator;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -10,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -23,6 +27,7 @@ public class projectsFragment extends Fragment {
     RecyclerView recyclerView;
     ExploreAdapter adapter;
     DatabaseReference databaseReference;
+    LottieAnimationView animView;
 
 
     @Override
@@ -31,6 +36,19 @@ public class projectsFragment extends Fragment {
 
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_projects, container, false);
+
+        animView = (LottieAnimationView) view.findViewById(R.id.animation_celeb);
+
+        float progress = animView.getProgress();
+        ValueAnimator valueAnimator = ValueAnimator.ofFloat(-progress,0 ).setDuration((long) ( animView.getDuration()* progress));
+        valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator animation) {
+
+                animView.setProgress(Math.abs((float)animation.getAnimatedValue()));
+            }
+        });
+        valueAnimator.start();
 
         databaseReference = FirebaseDatabase.getInstance().getReference().child("companyList");
         recyclerView = (RecyclerView) view.findViewById(R.id.ToursRecyclerView);

@@ -104,7 +104,7 @@ public class homeFragment extends Fragment implements NavigationView.OnNavigatio
         drawerLayout = (DrawerLayout) view.findViewById(R.id.my_drawer_layout);
         actionBarDrawerToggle = new ActionBarDrawerToggle(getActivity(), drawerLayout, toolbar, R.string.app_name, R.string.app_name);
         toolbar.setNavigationIcon(R.drawable.ic_baseline_account_balance_24);
-        actionBarDrawerToggle.getDrawerArrowDrawable().setColor(getResources().getColor(R.color.black));
+        actionBarDrawerToggle.getDrawerArrowDrawable().setColor(getResources().getColor(R.color.white));
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
 

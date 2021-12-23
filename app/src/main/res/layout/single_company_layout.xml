@@ -52,7 +52,7 @@
                         android:paddingEnd="5dp"
                         android:paddingBottom="2dp"
                         android:singleLine="true"
-                        android:background="@color/purple_500"
+                        android:background="@color/pale_pink"
                         android:text="02:13:56"
                         android:textColor="@color/white"
                         android:textSize="14sp"
@@ -151,7 +151,7 @@
                             android:layout_height="wrap_content"
                             android:singleLine="true"
                             android:text="Total Slots"
-                            android:textColor="@color/purple_500"
+                            android:textColor="@color/pale_pink"
                             android:textSize="10sp" />
 
                         <TextView
@@ -211,11 +211,11 @@
                         android:layout_toEndOf="@id/CompanyRatingTxt"
                         android:drawableRight="@drawable/ic_baseline_location_on_18"
                         android:drawablePadding="2dp"
-                        android:drawableTint="@color/purple_500"
+                        android:drawableTint="@color/pale_pink"
                         android:gravity="end"
                         android:singleLine="true"
                         android:text="Location"
-                        android:textColor="@color/purple_500"
+                        android:textColor="@color/pale_pink"
                         android:textSize="12sp" />
 
 
