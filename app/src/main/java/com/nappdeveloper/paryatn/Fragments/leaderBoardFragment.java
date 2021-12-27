@@ -14,13 +14,14 @@ import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.nappdeveloper.paryatn.Adapters.ExploreAdapter;
+import com.nappdeveloper.paryatn.Adapters.leaderboardAdapter;
 import com.nappdeveloper.paryatn.Model.Model;
 import com.nappdeveloper.paryatn.R;
 
 public class leaderBoardFragment extends Fragment {
 
     RecyclerView recyclerView;
-    ExploreAdapter adapter;
+    leaderboardAdapter adapter;
     DatabaseReference databaseReference;
 
     @Override
@@ -30,7 +31,7 @@ public class leaderBoardFragment extends Fragment {
         View view=inflater.inflate(R.layout.fragment_leader_board, container, false);
 
         databaseReference = FirebaseDatabase.getInstance().getReference().child("companyList");
-        recyclerView = (RecyclerView) view.findViewById(R.id.projectsRecyclerView);
+        recyclerView = (RecyclerView) view.findViewById(R.id.leaderBoardRecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.getRecycledViewPool().clear();
 
@@ -40,7 +41,7 @@ public class leaderBoardFragment extends Fragment {
                         .setQuery(databaseReference, Model.class)
                         .build();
 
-        adapter = new ExploreAdapter(options);
+        adapter = new leaderboardAdapter(options);
         recyclerView.setAdapter(adapter);
 
         return view;
