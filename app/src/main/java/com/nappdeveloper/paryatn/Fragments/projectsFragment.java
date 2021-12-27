@@ -35,7 +35,7 @@ public class projectsFragment extends Fragment {
 
 
 
-        databaseReference = FirebaseDatabase.getInstance().getReference().child("companyList");
+        databaseReference = FirebaseDatabase.getInstance().getReference().child("users");
         recyclerView = (RecyclerView) view.findViewById(R.id.projectsRecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.getRecycledViewPool().clear();

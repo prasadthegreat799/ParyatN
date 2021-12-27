@@ -72,8 +72,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        app:cardCornerRadius="10dp"
-                        android:backgroundTint="@color/purple_500"
+                        app:cardCornerRadius="20dp"
+                        android:backgroundTint="@color/white"
                         android:layout_marginTop="20dp"
                         android:layout_marginStart="15dp"
                         android:layout_marginEnd="15dp"
@@ -115,7 +115,7 @@
                                         android:layout_marginBottom="5dp"
                                         android:text="User Name"
                                         android:textStyle="bold"
-                                        android:textColor="@color/white"
+                                        android:textColor="@color/black"
                                         android:textSize="18sp"
                                         android:singleLine="true"/>
 
@@ -124,7 +124,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="Branch Here"
-                                        android:textColor="@color/white"
+                                        android:textColor="@color/black"
                                         android:textSize="14sp"/>
 
                                 </LinearLayout>
@@ -154,10 +154,26 @@
                         android:layout_marginTop="5dp"
                         android:layout_marginBottom="5dp"
                         android:text="Mail Here"
-                        android:gravity="center"
+                        android:singleLine="true"
                         android:textColor="@color/black"
                         android:textSize="13sp"
                         android:drawableStart="@drawable/ic_baseline_email_24"
+                        android:drawableTint="@color/black"
+                        android:drawablePadding="10dp"/>
+
+                    <TextView
+                        android:id="@+id/UserPhoneTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="Phone Number"
+                        android:singleLine="true"
+                        android:textSize="13sp"
+                        android:textColor="@color/black"
+                        android:drawableStart="@drawable/ic_baseline_phone_24"
                         android:drawableTint="@color/black"
                         android:drawablePadding="10dp"/>
 
@@ -170,7 +186,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_marginBottom="5dp"
                         android:text="User College"
-                        android:gravity="center"
+                        android:singleLine="true"
                         android:textSize="13sp"
                         android:textColor="@color/black"
                         android:drawableStart="@drawable/ic_baseline_account_balance_24"
@@ -186,26 +202,10 @@
                         android:layout_marginTop="5dp"
                         android:layout_marginBottom="5dp"
                         android:text="User Location"
-                        android:gravity="center"
+                        android:singleLine="true"
                         android:textSize="13sp"
                         android:textColor="@color/black"
                         android:drawableStart="@drawable/ic_baseline_location_on_24"
-                        android:drawableTint="@color/black"
-                        android:drawablePadding="10dp"/>
-
-                    <TextView
-                        android:id="@+id/UserPhoneTxt"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginEnd="10dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="5dp"
-                        android:text="Phone Number"
-                        android:gravity="center"
-                        android:textSize="13sp"
-                        android:textColor="@color/black"
-                        android:drawableStart="@drawable/ic_baseline_phone_24"
                         android:drawableTint="@color/black"
                         android:drawablePadding="10dp"/>
 
