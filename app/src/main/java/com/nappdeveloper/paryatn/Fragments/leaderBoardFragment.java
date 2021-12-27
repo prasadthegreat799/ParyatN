@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
@@ -18,21 +17,17 @@ import com.nappdeveloper.paryatn.Adapters.ExploreAdapter;
 import com.nappdeveloper.paryatn.Model.Model;
 import com.nappdeveloper.paryatn.R;
 
-public class projectsFragment extends Fragment {
+public class leaderBoardFragment extends Fragment {
 
     RecyclerView recyclerView;
     ExploreAdapter adapter;
     DatabaseReference databaseReference;
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_projects, container, false);
-
-
-
+        View view=inflater.inflate(R.layout.fragment_leader_board, container, false);
 
         databaseReference = FirebaseDatabase.getInstance().getReference().child("companyList");
         recyclerView = (RecyclerView) view.findViewById(R.id.projectsRecyclerView);

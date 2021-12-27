@@ -5,8 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -17,7 +15,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.nappdeveloper.paryatn.Fragments.exploreFragment;
 import com.nappdeveloper.paryatn.Fragments.homeFragment;
 import com.nappdeveloper.paryatn.Fragments.profileFragment;
-import com.nappdeveloper.paryatn.Fragments.projectsFragment;
+import com.nappdeveloper.paryatn.Fragments.challengesFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -40,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
         bottomNavigationView = (BottomNavigationView) findViewById(R.id.BottomNavigationView);
         Menu menuNav = bottomNavigationView.getMenu();
-        getSupportFragmentManager().beginTransaction().replace(R.id.StudentFragmentContainer, new homeFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.FragmentContainer, new homeFragment()).commit();
 
         bottomNavigationView.setOnNavigationItemSelectedListener(bottomnavMethod);
     }
@@ -71,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
                             relativeLayout_main.setBackgroundColor(getResources().getColor(R.color.purple_200)); */
                             break;
                         case R.id.toursMenu:
-                            fragment = new projectsFragment();
+                            fragment = new challengesFragment();
 
                            /* v2.setBackgroundColor(getResources().getColor(R.color.purple_500));
                             v1.setBackgroundColor(getResources().getColor(R.color.white));
@@ -92,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
                         default:
                             Toast.makeText(getApplicationContext(), "Unknown Location", Toast.LENGTH_SHORT).show();
                     }
-                    getSupportFragmentManager().beginTransaction().replace(R.id.StudentFragmentContainer, fragment).commit();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.FragmentContainer, fragment).commit();
                     return true;
                 }
 
@@ -100,6 +98,8 @@ public class MainActivity extends AppCompatActivity {
 
     boolean doubleBackToExitPressedOnce = false;
 
+
+    /*
     @Override
     public void onBackPressed() {
         if (doubleBackToExitPressedOnce) {
@@ -117,6 +117,6 @@ public class MainActivity extends AppCompatActivity {
                 doubleBackToExitPressedOnce=false;
             }
         }, 2000);
-    }
+    } */
 
 }

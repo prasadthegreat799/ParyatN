@@ -236,6 +236,7 @@
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/userTripsTxt"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="26"
@@ -271,6 +272,7 @@
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/userRatingTxt"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="4.5"
@@ -404,7 +406,7 @@
                         android:layout_gravity="center"
                         android:text="Logout"
                         android:gravity="center_vertical"
-                        android:background="@color/pale_red"
+                        android:background="@color/purple_500"
                         android:textSize="15sp"
                         android:textStyle="bold"
                         android:textColor="@color/white"

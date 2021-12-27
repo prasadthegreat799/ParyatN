@@ -45,7 +45,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.mikhaellopez.circularimageview.CircularImageView;
+import com.nappdeveloper.paryatn.Activities.searchBarActivity;
 import com.nappdeveloper.paryatn.Activities.splashActivity;
+import com.nappdeveloper.paryatn.Activities.studentPartnerActivity;
+import com.nappdeveloper.paryatn.Activities.tourismPartnerActivity;
 import com.nappdeveloper.paryatn.Adapters.FilterAdapter;
 import com.nappdeveloper.paryatn.Adapters.PopularCategoriesAdapter;
 import com.nappdeveloper.paryatn.Model.Model;
@@ -53,7 +56,8 @@ import com.nappdeveloper.paryatn.R;
 import com.synnapps.carouselview.CarouselView;
 import com.synnapps.carouselview.ImageListener;
 
-public class homeFragment extends Fragment implements NavigationView.OnNavigationItemSelectedListener{
+public class homeFragment extends Fragment implements NavigationView.OnNavigationItemSelectedListener {
+
 
     RecyclerView filterRecyclerView;
     FilterAdapter filterAdapter;
@@ -110,7 +114,6 @@ public class homeFragment extends Fragment implements NavigationView.OnNavigatio
 
         carouselView = (CarouselView) view.findViewById(R.id.carouselView);
         carouselView.setPageCount(sampleImages.length);
-
         carouselView.setImageListener(imageListener);
 
         navigationView = (NavigationView) view.findViewById(R.id.navigationView);
@@ -126,31 +129,40 @@ public class homeFragment extends Fragment implements NavigationView.OnNavigatio
 
         filterDatabaseReference = FirebaseDatabase.getInstance().getReference().child("filterNamesList");
         filterRecyclerView = (RecyclerView) view.findViewById(R.id.filterRecyclerView);
+        filterRecyclerView.hasFixedSize();
+        filterRecyclerView.setItemAnimator(null);
         filterRecyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         filterRecyclerView.getRecycledViewPool().clear();
 
 
-
         popularCategoriesDatabaseReference = FirebaseDatabase.getInstance().getReference().child("companyList");
         popularCategoriesRecyclerView = (RecyclerView) view.findViewById(R.id.popularCategoriesRecyclerView);
-        popularCategoriesRecyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+        popularCategoriesRecyclerView.hasFixedSize();
+        popularCategoriesRecyclerView.setItemAnimator(null);
+        popularCategoriesRecyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));;
         popularCategoriesRecyclerView.getRecycledViewPool().clear();
 
 
-
-
-
-
-
+        //To show the filter data in home frame layout
         Fragment fragment = new filterFragment();
         FragmentManager fragmentManager = ((FragmentActivity) view.getContext()).getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         Bundle bundle = new Bundle();
-        bundle.putString("name","All");
+        bundle.putString("name", "All");
         fragment.setArguments(bundle);
         fragmentTransaction.replace(R.id.filterLayout, fragment);
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
+
+        searchTxt.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+
+                Intent intent = new Intent(getContext(), searchBarActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
         //Firebase Recycler Options to get the data form firebase database using model class and reference
         FirebaseRecyclerOptions<Model> options =
@@ -161,14 +173,15 @@ public class homeFragment extends Fragment implements NavigationView.OnNavigatio
         filterRecyclerView.setAdapter(filterAdapter);
 
 
+
+
         FirebaseRecyclerOptions<Model> pcOptions =
                 new FirebaseRecyclerOptions.Builder<Model>()
                         .setQuery(popularCategoriesDatabaseReference, Model.class)
                         .build();
 
-        popularCategoriesAdapter= new PopularCategoriesAdapter(pcOptions);
+        popularCategoriesAdapter = new PopularCategoriesAdapter(pcOptions);
         popularCategoriesRecyclerView.setAdapter(popularCategoriesAdapter);
-
 
 
         String userId = GoogleSignIn.getLastSignedInAccount(getContext()).getId().toString();
@@ -192,31 +205,31 @@ public class homeFragment extends Fragment implements NavigationView.OnNavigatio
                 });
 
         // load the animation
-        Animation animPushIn = AnimationUtils.loadAnimation(getContext().getApplicationContext(),R.anim.pushin_right);
+        Animation animPushIn = AnimationUtils.loadAnimation(getContext().getApplicationContext(), R.anim.pushin_right);
 
         // start the animation
         sexyLogoLayout.startAnimation(animPushIn);
 
         // load the animation
-        Animation animRotate = AnimationUtils.loadAnimation(getContext().getApplicationContext(),R.anim.rotation_pushin);
+        Animation animRotate = AnimationUtils.loadAnimation(getContext().getApplicationContext(), R.anim.rotation_pushin);
 
         // start the animation
         profileImageCard.startAnimation(animRotate);
 
         // load the animation
-        Animation animFadeIn = AnimationUtils.loadAnimation(getContext().getApplicationContext(),R.anim.fadein);
+        Animation animFadeIn = AnimationUtils.loadAnimation(getContext().getApplicationContext(), R.anim.fadein);
 
         // start the animation
         userGreet.startAnimation(animPushIn);
 
         // load the animation
-        Animation animPushLeftIn = AnimationUtils.loadAnimation(getContext().getApplicationContext(),R.anim.pushin_leftin);
+        Animation animPushLeftIn = AnimationUtils.loadAnimation(getContext().getApplicationContext(), R.anim.pushin_leftin);
 
         // start the animation
         searchIcon.startAnimation(animPushLeftIn);
 
         // load the animation
-        Animation animFadeIn2 = AnimationUtils.loadAnimation(getContext().getApplicationContext(),R.anim.fadein);
+        Animation animFadeIn2 = AnimationUtils.loadAnimation(getContext().getApplicationContext(), R.anim.fadein);
 
         // start the animation
         searchTxt.startAnimation(animFadeIn2);
@@ -255,15 +268,27 @@ public class homeFragment extends Fragment implements NavigationView.OnNavigatio
         switch (item.getItemId()) {
 
             case R.id.profileMenu:
-                Toast.makeText(getContext(),"Profile",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "Profile", Toast.LENGTH_SHORT).show();
                 break;
+
+            case R.id.studentPartnerMenu:
+                Intent studentIntent = new Intent(getContext(), studentPartnerActivity.class);
+                startActivity(studentIntent);
+                break;
+
+
+            case R.id.tourismPartnerMenu:
+                Intent tourismPartnerIntent = new Intent(getContext(), tourismPartnerActivity.class);
+                startActivity(tourismPartnerIntent);
+                break;
+
             case R.id.contactusSliderMenu:
                 try {
-                    Intent intent = new Intent (Intent.ACTION_VIEW , Uri.parse("mailto:" + "paryatn.info@gmail.com"));
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("mailto:" + "paryatn.info@gmail.com"));
                     intent.putExtra(Intent.EXTRA_SUBJECT, "your subject goes here...");
                     intent.putExtra(Intent.EXTRA_TEXT, "Complaint From ParyatN User App");
                     startActivity(intent);
-                } catch(Exception e) {
+                } catch (Exception e) {
                     Toast.makeText(getContext(), "Sorry...You don't have any mail app", Toast.LENGTH_SHORT).show();
                     e.printStackTrace();
                 }
@@ -272,7 +297,7 @@ public class homeFragment extends Fragment implements NavigationView.OnNavigatio
             case R.id.shareSliderMenu:
                 Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
                 sharingIntent.setType("text/plain");
-                String shareBody ="Hey Hi, " +
+                String shareBody = "Hey Hi, " +
                         "Let Me Introduce you to this app called ParyatN.\n" +
                         "        This is an amazing app that teaches you practical knowledge through tours of industries.";
                 sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "ParyatN");

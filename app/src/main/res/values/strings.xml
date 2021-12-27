@@ -29,5 +29,12 @@
     <string name="tour_planner">Dont Know how to use ParyatN ? ParyatN Guide</string>
 
 
+    <!--- Register Activity Details -->
+    <string name="user_college">Enter Your College</string>
+    <string name="user_branch">Enter Your Branch</string>
+    <string name="user_phone">Enter Your Phone</string>
+    <string name="register_details">Lets Go</string>
+
+    <string name="search_text">Search your tour here</string>
 
 </resources>

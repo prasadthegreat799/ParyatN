@@ -1,5 +1,6 @@
 package com.nappdeveloper.paryatn.Adapters;
 
+import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -34,7 +35,7 @@ public class ExploreFilterAdapter extends FirebaseRecyclerAdapter<Model, Explore
     }
 
     @Override
-    protected void onBindViewHolder(@NonNull ExploreFilterAdapter.Viewholder holder, int position, @NonNull Model model) {
+    protected void onBindViewHolder(@NonNull ExploreFilterAdapter.Viewholder holder, @SuppressLint("RecyclerView") int position, @NonNull Model model) {
 
         String name=model.getFilterName().toString();
         holder.filterNameTxt.setText(name);

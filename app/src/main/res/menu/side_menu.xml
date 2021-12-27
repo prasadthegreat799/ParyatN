@@ -39,8 +39,13 @@
                 android:id="@+id/group2"
                 android:checkableBehavior="single">
 
-                <item android:title="Student Partner" />
-                <item android:title="Tourism Partner" />
+                <item
+                    android:id="@+id/studentPartnerMenu"
+                    android:title="Student Partner" />
+
+                <item
+                    android:id="@+id/tourismPartnerMenu"
+                    android:title="Tourism Partner" />
 
             </group>
         </menu>

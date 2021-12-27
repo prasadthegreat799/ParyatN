@@ -5,50 +5,41 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Activities.registerUserActivity">
+    tools:context=".Activities.tourismPartnerActivity">
 
 
     <EditText
-        android:id="@+id/user_college_txt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:background="@drawable/search_outline"
-        android:hint="@string/user_college"
-        android:inputType="textPersonName"
+        android:hint="Enter your Name"
         android:padding="10dp" />
 
 
     <EditText
-        android:id="@+id/user_branch_txt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:background="@drawable/search_outline"
-        android:hint="@string/user_branch"
-        android:inputType="textPersonName"
+        android:hint="Enter your phone"
         android:padding="10dp" />
 
-
     <EditText
-        android:id="@+id/user_phone_txt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:background="@drawable/search_outline"
-        android:hint="@string/user_phone"
-        android:inputType="phone"
+        android:hint="Enter your location"
         android:padding="10dp" />
 
 
     <Button
-        android:id="@+id/register_UserDetails_Btn"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:layout_margin="10dp"
         android:padding="10dp"
-        android:text="@string/register_details" />
+        android:text="Submit Details" />
 
 
 </LinearLayout>

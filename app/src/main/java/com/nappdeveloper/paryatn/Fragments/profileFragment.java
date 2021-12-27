@@ -19,6 +19,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import androidx.appcompat.widget.Toolbar;
 
 import com.bumptech.glide.Glide;
@@ -39,8 +40,9 @@ import com.nappdeveloper.paryatn.R;
 public class profileFragment extends Fragment {
 
     CircularImageView profileImg;
-    TextView userName, userMail, userCollege, userLocation, userBranch, signOutBtn, shareBtn, editBtn, tripsHistoryBtn, favToursBtn, settingsBtn, helpBtn;
+    TextView userName, userMail, userCollege, userLocation, userBranch, userPhone, signOutBtn, shareBtn, editBtn, tripsHistoryBtn, favToursBtn, settingsBtn, helpBtn;
     Toolbar toolbar;
+    TextView userTrips,userRating;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -54,11 +56,16 @@ public class profileFragment extends Fragment {
         userBranch = (TextView) view.findViewById(R.id.UserBranchTxt);
         userCollege = (TextView) view.findViewById(R.id.UserCollegeTxt);
         userLocation = (TextView) view.findViewById(R.id.UserLocationTxt);
+        userPhone = (TextView) view.findViewById(R.id.UserPhoneTxt);
         editBtn = (TextView) view.findViewById(R.id.editBtn);
         tripsHistoryBtn = (TextView) view.findViewById(R.id.tripsHistory);
         favToursBtn = (TextView) view.findViewById(R.id.favTours);
         settingsBtn = (TextView) view.findViewById(R.id.settings);
         helpBtn = (TextView) view.findViewById(R.id.helpSupport);
+
+        userTrips=(TextView) view.findViewById(R.id.userTripsTxt);
+        userRating=(TextView) view.findViewById(R.id.userRatingTxt);
+
 
         //toolbar = (Toolbar) view.findViewById(R.id.toolbar);
 
@@ -131,7 +138,7 @@ public class profileFragment extends Fragment {
 
                 Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
                 sharingIntent.setType("text/plain");
-                String shareBody ="Hey Hi," +
+                String shareBody = "Hey Hi," +
                         "Let Me Introduce you to this app called ParyatN.\n" +
                         "        This is an amazing app that teaches you practical knowledge through tours of industries.";
                 sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "ParyatN");
@@ -153,10 +160,23 @@ public class profileFragment extends Fragment {
                         String mail = snapshot.child("mail").getValue().toString();
                         String imageLink = snapshot.child("profilePic").getValue().toString();
 
+                        String college = snapshot.child("userCollege").getValue().toString();
+                        String branch = snapshot.child("userBranch").getValue().toString();
+                        String phone = snapshot.child("userPhone").getValue().toString();
+                        String rating = snapshot.child("userRating").getValue().toString();
+                        String trips = snapshot.child("userTrips").getValue().toString();
+
 
                         Glide.with(getActivity()).load(imageLink).into(profileImg);
                         userName.setText(name);
                         userMail.setText(mail);
+
+                        userCollege.setText(college);
+                        userPhone.setText(phone);
+                        userBranch.setText(branch);
+
+                        userTrips.setText(trips);
+                        userRating.setText(rating);
 
                     }
 

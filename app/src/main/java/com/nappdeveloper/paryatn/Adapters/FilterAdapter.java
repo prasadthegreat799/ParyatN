@@ -80,6 +80,7 @@ public class FilterAdapter extends FirebaseRecyclerAdapter<Model, FilterAdapter.
 
     @Override
     public void onDataChanged() {
+
         notifyDataSetChanged();
         super.onDataChanged();
     }

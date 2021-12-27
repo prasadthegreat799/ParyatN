@@ -1,5 +1,6 @@
 package com.nappdeveloper.paryatn.Fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -9,6 +10,8 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,6 +23,7 @@ import android.widget.ImageView;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.nappdeveloper.paryatn.Activities.searchBarActivity;
 import com.nappdeveloper.paryatn.Adapters.ExploreAdapter;
 import com.nappdeveloper.paryatn.Adapters.ExploreFilterAdapter;
 import com.nappdeveloper.paryatn.Adapters.FilterAdapter;
@@ -30,9 +34,9 @@ public class exploreFragment extends Fragment {
 
     RecyclerView recyclerView;
     ExploreFilterAdapter adapter;
-    DatabaseReference databaseReference;
+    DatabaseReference databaseReference,searchRef;
     ImageView searchIcon;
-    EditText searchTxt;
+    EditText searchBox;
 
 
     @Override
@@ -42,9 +46,10 @@ public class exploreFragment extends Fragment {
         View view=inflater.inflate(R.layout.fragment_explore, container, false);
 
         searchIcon = (ImageView) view.findViewById(R.id.searchIconExplore);
-        searchTxt = (EditText) view.findViewById(R.id.searchTxtExplore);
+        searchBox = (EditText) view.findViewById(R.id.searchTxtExplore);
 
         databaseReference =FirebaseDatabase.getInstance().getReference().child("filterNamesList");
+        searchRef=FirebaseDatabase.getInstance().getReference().child("filterCompanies").child("All");
         recyclerView = (RecyclerView) view.findViewById(R.id.exploreFilterRecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         recyclerView.getRecycledViewPool().clear();
@@ -59,7 +64,6 @@ public class exploreFragment extends Fragment {
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
 
-
         //Firebase Recycler Options to get the data form firebase database using model class and reference
         FirebaseRecyclerOptions<Model> options =
                 new FirebaseRecyclerOptions.Builder<Model>()
@@ -69,6 +73,15 @@ public class exploreFragment extends Fragment {
         adapter = new ExploreFilterAdapter(options);
         recyclerView.setAdapter(adapter);
 
+
+        searchBox.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+
+                Intent intent=new Intent(getContext(), searchBarActivity.class);
+                startActivity(intent);
+            }
+        });
         return view;
     }
 
