@@ -15,13 +15,14 @@ import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.nappdeveloper.paryatn.Adapters.ExploreAdapter;
+import com.nappdeveloper.paryatn.Adapters.projectAdapter;
 import com.nappdeveloper.paryatn.Model.Model;
 import com.nappdeveloper.paryatn.R;
 
 public class projectsFragment extends Fragment {
 
     RecyclerView recyclerView;
-    ExploreAdapter adapter;
+    projectAdapter adapter;
     DatabaseReference databaseReference;
 
 
@@ -45,7 +46,7 @@ public class projectsFragment extends Fragment {
                         .setQuery(databaseReference, Model.class)
                         .build();
 
-        adapter = new ExploreAdapter(options);
+        adapter = new projectAdapter(options);
         recyclerView.setAdapter(adapter);
 
         return view;
