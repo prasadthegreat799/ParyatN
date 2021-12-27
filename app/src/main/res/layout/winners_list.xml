@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Project Name"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/profile_icon"
+            android:drawablePadding="5dp"
+            android:layout_marginBottom="3dp"
+            android:gravity="center_vertical"
+            android:text="1st Winner"
+            android:textSize="14sp"
+            android:padding="5dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/profile_icon"
+            android:drawablePadding="5dp"
+            android:layout_marginBottom="3dp"
+            android:gravity="center_vertical"
+            android:text="2nd Winner"
+            android:textSize="14sp"
+            android:padding="5dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/profile_icon"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:text="3rd Winner"
+            android:textSize="14sp"
+            android:padding="5dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
