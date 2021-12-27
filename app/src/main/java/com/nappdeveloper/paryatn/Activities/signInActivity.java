@@ -128,10 +128,12 @@ public class signInActivity extends AppCompatActivity {
                                                                 String name = googleSignInAccount.getDisplayName().toString();
                                                                 String mail = googleSignInAccount.getEmail().toString();
                                                                 String pic = googleSignInAccount.getPhotoUrl().toString();
+                                                                String firstName=googleSignInAccount.getGivenName().toString();
 
 
                                                                 user_details.put("userId", id);
                                                                 user_details.put("userName", name);
+                                                                user_details.put("givenName",firstName);
                                                                 user_details.put("userNameLowerCase", name.toLowerCase());
                                                                 user_details.put("mail", mail);
                                                                 user_details.put("profilePic", pic);

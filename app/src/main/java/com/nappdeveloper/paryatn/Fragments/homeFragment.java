@@ -28,6 +28,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
@@ -59,6 +60,11 @@ import com.synnapps.carouselview.ImageListener;
 public class homeFragment extends Fragment implements NavigationView.OnNavigationItemSelectedListener {
 
 
+    TextView userName,userNameHome;
+    ImageView userProfile;
+
+
+
     RecyclerView filterRecyclerView;
     FilterAdapter filterAdapter;
     DatabaseReference filterDatabaseReference;
@@ -85,6 +91,8 @@ public class homeFragment extends Fragment implements NavigationView.OnNavigatio
     CardView profileImageCard;
 
 
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -104,6 +112,7 @@ public class homeFragment extends Fragment implements NavigationView.OnNavigatio
         searchIcon = (ImageView) view.findViewById(R.id.searchIcon);
         searchTxt = (EditText) view.findViewById(R.id.searchTxt);
 
+        userNameHome=(TextView) view.findViewById(R.id.userNameHome);
         profileImg = (CircularImageView) view.findViewById(R.id.HomeProfileImg);
         drawerLayout = (DrawerLayout) view.findViewById(R.id.my_drawer_layout);
         actionBarDrawerToggle = new ActionBarDrawerToggle(getActivity(), drawerLayout, toolbar, R.string.app_name, R.string.app_name);
@@ -126,6 +135,11 @@ public class homeFragment extends Fragment implements NavigationView.OnNavigatio
         // find MenuItem you want to change
         MenuItem nav_sidemenu = menu.findItem(R.id.title_sideMenu);
         navigationView.setNavigationItemSelectedListener(this);
+
+
+        //Setting data to navigation header
+        userName=(TextView) navigationView.getHeaderView(0).findViewById(R.id.NavUserName);
+        userProfile=(ImageView) navigationView.getHeaderView(0).findViewById(R.id.NavUserImg);
 
         filterDatabaseReference = FirebaseDatabase.getInstance().getReference().child("filterNamesList");
         filterRecyclerView = (RecyclerView) view.findViewById(R.id.filterRecyclerView);
@@ -193,9 +207,16 @@ public class homeFragment extends Fragment implements NavigationView.OnNavigatio
                             return;
                         }
                         String imageLink = snapshot.child("profilePic").getValue().toString();
+                        String name=snapshot.child("userName").getValue().toString();
+                        String givenName=snapshot.child("givenName").getValue().toString();
+
+
+                        userName.setText(name);
+                        userNameHome.setText("Hello "+givenName+",");
 
 
                         Glide.with(getActivity()).load(imageLink).into(profileImg);
+                        Glide.with(getActivity()).load(imageLink).into(userProfile);
                     }
 
                     @Override
