@@ -8,7 +8,8 @@
         android:checkableBehavior="single">
         <item
             android:id="@+id/title_sideMenu"
-            android:title="ParyatN" />
+            android:title="ParyatN"
+            app:showAsAction="never"/>
     </group>
 
     <item android:title="Tours">
@@ -20,13 +21,13 @@
                     android:icon="@drawable/ic_baseline_favorite_24"
                     android:title="Favourites"
                     app:iconTint="@color/pale_pink"
-                    app:showAsAction="always" />
+                    app:showAsAction="never" />
 
                 <item
                     android:icon="@drawable/bookings_icon"
                     android:title="Bookings"
                     app:iconTint="@color/green"
-                    app:showAsAction="always" />
+                    app:showAsAction="never" />
 
             </group>
         </menu>
@@ -41,11 +42,13 @@
 
                 <item
                     android:id="@+id/studentPartnerMenu"
-                    android:title="Student Partner" />
+                    android:title="Student Partner"
+                    app:showAsAction="never"/>
 
                 <item
                     android:id="@+id/tourismPartnerMenu"
-                    android:title="Tourism Partner" />
+                    android:title="Tourism Partner"
+                    app:showAsAction="never"/>
 
             </group>
         </menu>
