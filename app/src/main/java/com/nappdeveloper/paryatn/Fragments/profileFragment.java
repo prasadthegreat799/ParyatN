@@ -60,7 +60,6 @@ public class profileFragment extends Fragment {
         editBtn = (TextView) view.findViewById(R.id.editBtn);
         tripsHistoryBtn = (TextView) view.findViewById(R.id.tripsHistory);
         favToursBtn = (TextView) view.findViewById(R.id.favTours);
-        settingsBtn = (TextView) view.findViewById(R.id.settings);
         helpBtn = (TextView) view.findViewById(R.id.helpSupport);
 
         userTrips=(TextView) view.findViewById(R.id.userTripsTxt);

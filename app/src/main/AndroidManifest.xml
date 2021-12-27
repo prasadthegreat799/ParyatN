@@ -15,6 +15,15 @@
         android:theme="@style/Theme.Paryatan"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".Activities.feedBackActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.favouritesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.bookingsActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activities.tourismPartnerActivity"
             android:exported="false" />
         <activity
